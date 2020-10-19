@@ -1,0 +1,13 @@
+<%= form_for @recipe do |f| %>
+
+<%= f.label :name %>
+<%= f.text_field :name %>
+<br>
+<%= f.label :description %>
+<%= f.text_area :description, size: "60x12" %>
+<br>
+<%= f.label :ingredients %>
+<%= f.collection_select :ingredients, Ingredient.all, :id, :name %>
+<br>
+<%= f.submit %>
+<% end %>

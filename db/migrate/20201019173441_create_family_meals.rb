@@ -3,6 +3,7 @@ class CreateFamilyMeals < ActiveRecord::Migration[6.0]
     create_table :family_meals do |t|
       t.integer :recipe_id
       t.integer :employee_id
+      t.string :shift
 
       t.timestamps
     end

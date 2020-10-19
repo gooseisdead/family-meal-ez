@@ -23,7 +23,7 @@ Ingredient.create(name: Faker::Food.ingredient, quantity: rand(1..15), quality: 
 end
 
 30.times do
-FamilyMeal.create(recipe_id: Recipe.all.sample.id, employee_id: Employee.all.sample.id)
+FamilyMeal.create(recipe_id: Recipe.all.sample.id, employee_id: Employee.all.sample.id, shift: shifts.sample)
 end
 
 30.times do

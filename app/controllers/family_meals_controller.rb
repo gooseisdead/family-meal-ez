@@ -43,7 +43,7 @@ class FamilyMealsController < ApplicationController
 private
 
     def family_meal_params
-        params.require(:family_meal).permit(:recipe_id, :employee_id)
+        params.require(:family_meal).permit(:recipe_id, :employee_id, :shift)
     end
 
     def find_family_meals
