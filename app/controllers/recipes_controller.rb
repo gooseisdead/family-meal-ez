@@ -37,6 +37,14 @@ class RecipesController < ApplicationController
         end
     end
 
+    def destroy 
+        if @recipe.present?
+          @recipe.destroy
+        else
+        redirect_to recipes_path
+        end
+    end
+
 
     
 private

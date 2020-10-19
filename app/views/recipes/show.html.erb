@@ -7,3 +7,7 @@
 <% @recipe.recipe_ingredients.each do |recipe_ingredient| %>
 <li><%= recipe_ingredient.ingredient.name %></li>
 <% end %>
+
+<%= button_to "Delete", recipe_path(@recipe), method: :delete %>
+
+
