@@ -1,5 +1,5 @@
 class FamilyMealsController < ApplicationController
-    before_action :find_family_meals, only: [:edit, :update, :show, :destory]
+    before_action :find_family_meals, only: [:edit, :update, :show, :destroy]
 
     def index
         @family_meals = FamilyMeal.all

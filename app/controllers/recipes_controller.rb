@@ -1,5 +1,5 @@
 class RecipesController < ApplicationController
-    before_action :find_recipes, only: [:edit, :update, :show, :destory]
+    before_action :find_recipes, only: [:edit, :update, :show, :destroy]
 
     def index
         @recipes = Recipe.all
@@ -38,11 +38,8 @@ class RecipesController < ApplicationController
     end
 
     def destroy 
-        if @recipe.present?
-          @recipe.destroy
-        else
+        @recipe.destroy
         redirect_to recipes_path
-        end
     end
 
 

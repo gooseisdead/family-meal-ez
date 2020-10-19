@@ -1,5 +1,5 @@
 class IngredientsController < ApplicationController
-    before_action :find_ingredients, only: [:edit, :update, :show, :destory]
+    before_action :find_ingredients, only: [:edit, :update, :show, :destroy]
 
     def index
         @ingredients = Ingredient.all

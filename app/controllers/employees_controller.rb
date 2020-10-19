@@ -1,5 +1,5 @@
 class EmployeesController < ApplicationController
-    before_action :find_employees, only: [:edit, :update, :show, :destory]
+    before_action :find_employees, only: [:edit, :update, :show, :destroy]
 
     def index
         @employees = Employee.all
