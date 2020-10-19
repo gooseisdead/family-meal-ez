@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 ingredient_quality = ["fresh", "day-old", "expring", "use today"]
-jobs = ["cook", "busser", "runner", "server"]
+jobs = ["cook", "busser", "runner", "server", "bartender"]
 shifts = ["breakfast", "lunch", "dinner"]
 
 10.times do
