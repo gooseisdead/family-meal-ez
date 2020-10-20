@@ -6,7 +6,13 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-ingredient_quality = ["fresh", "day-old", "expring", "use today"]
+Ingredient.destroy_all
+Recipe.destroy_all
+RecipeIngredient.destroy_all
+Employee.destroy_all
+FamilyMeal.destroy_all
+
+ingredient_quality = ["fresh", "day-old", "expiring", "use today"]
 jobs = ["cook", "busser", "runner", "server", "bartender"]
 shifts = ["breakfast", "lunch", "dinner"]
 

@@ -1,4 +1,12 @@
-<h1>Employee Profile</h1>
+<h1><u>Employee Profile</u></h1>
 
 <h2><%= @employee.name %></h2>
-<li>Job Title: <%= @employee.job_title %>  -  Shift: <%= @employee.shift %></li>
+<h3>Job Title: <%= @employee.job_title %></h3>
+<p>Shift: <%= @employee.shift %></p>
+<% if @employee.shift == "breakfast" %>
+<%= image_tag ("/assets/breakfast.png"), class: "img-responsive" %>
+<% elsif @employee.shift == "lunch"%>
+<%= image_tag ("/assets/lunch.png"), class: "img-responsive" %>
+<% else @employee.shift == "dinner" %>
+<%= image_tag ("/assets/dinner.png"), class: "img-responsive" %>
+<% end %>

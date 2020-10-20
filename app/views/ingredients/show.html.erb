@@ -1,0 +1,14 @@
+<h1>Ingredient Details</h1>
+
+<%= @ingredient.name %>
+<h2>Amount: <%= @ingredient.quantity %></h2>
+<p>Quality: ........... <i><b><%= @ingredient.quality %> </i></b></p>
+<% if @ingredient.quality == "fresh" %>
+<%= image_tag ("/assets/fresh.png"), class: "img-responsive" %>
+<% elsif @ingredient.quality == "day-old"%>
+<%= image_tag ("/assets/day_old.png"), class: "img-responsive" %>
+<% elsif @ingredient.quality == "use today"%>
+<%= image_tag ("/assets/urgent.png"), class: "img-responsive" %>
+<% else @ingredient.quality == "expiring" %>
+<%= image_tag ("/assets/expiring.png"), class: "img-responsive" %>
+<% end %>

@@ -1,21 +1,21 @@
 <h2>Breakfast</h2>
 <% @employees.map do |employee| %>
 <% if employee.shift == "breakfast" %>
-    <li><%= employee.name %></li>
+    <li><%= link_to employee.name, employee_path(employee) %></li>
     <% end %>
  <% end %>
 
  <h2>Lunch</h2>
 <% @employees.map do |employee| %>
 <% if employee.shift == "lunch" %>
-    <li><%= employee.name %></li>
+    <li><%= link_to employee.name, employee_path(employee) %></li>
     <% end %>
  <% end %>
 
  <h2>Dinner</h2>
 <% @employees.map do |employee| %>
 <% if employee.shift == "dinner" %>
-    <li><%= employee.name %></li>
+    <li><%= link_to employee.name, employee_path(employee) %></li>
     <% end %>
  <% end %>
 

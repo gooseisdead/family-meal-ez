@@ -1,0 +1,6 @@
+<h1><u>Ingredient Inventory</u></h2>
+
+<% @ingredients.each do |ingredient| %>
+<b><p><%= link_to ingredient.name, ingredient_path(ingredient) %></p></b>
+<ol>Amount: <%= ingredient.quantity %> - Quality: ........... <i><b><%= ingredient.quality %> </i></b></ol>
+<% end %>

@@ -5,9 +5,11 @@
 <br>
 <%= f.label :description %>
 <%= f.text_area :description, size: "60x12" %>
-<br>
-<%= f.label :ingredients %>
-<%= f.collection_select :ingredients, Ingredient.all, :id, :name %>
-<br>
-<%= f.submit %>
+<br><br><br>
+    <% ingredients = Ingredient.all %>
+    <% ingredients.each do |ingredient| %>
+    <%= f.check_box @recipe.ingredients, { multiple: true }, ingredient, false %>
+    <%= f.label ingredient.name %></li>
+    <% end %><br>
+    <%= f.submit %>
 <% end %>

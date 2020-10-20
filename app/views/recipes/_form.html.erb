@@ -9,7 +9,7 @@
     <% ingredients = Ingredient.all %>
     <% ingredients.each do |ingredient| %>
     <%= f.check_box :ingredients, { multiple: true }, ingredient, false %>
-    <%= f.label ingredient.name %></li>
+    <%= f.label ingredient.name %>
     <% end %><br>
     <%= f.submit %>
 <% end %>
