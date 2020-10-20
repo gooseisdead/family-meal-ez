@@ -23,6 +23,19 @@ class IngredientsController < ApplicationController
         end
     end
 
+    def edit
+    end
+
+    def update
+        if @ingredient.update(ingredient_params)
+          flash[:success] = "Ingredient was successfully updated"
+          redirect_to ingredient_path(@ingredient)
+        else
+          flash[:errors] = @ingredient.errors.full_messages
+          redirect_to edit_ingredient_path
+        end
+    end
+
     
 
 

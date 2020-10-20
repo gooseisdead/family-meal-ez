@@ -1,4 +1,5 @@
 <h1><u>Ingredient Details</u></h1>
+<p><%= button_to "Update Ingredient Iventory", ingredient_path(@ingredient) %></p>
 
 <% if flash[:success] %>
  <p style = "color:green;"><%= flash[:success] %></p> 
@@ -7,6 +8,7 @@
 <%= @ingredient.name %>
 <h2>Amount: <%= @ingredient.quantity %></h2>
 <p>Quality: ........... <i><b><%= @ingredient.quality %> </i></b></p>
+
 <% if @ingredient.quality == "fresh" %>
 <%= image_tag ("/assets/fresh.png"), class: "img-responsive" %>
 <% elsif @ingredient.quality == "day-old"%>
@@ -16,3 +18,5 @@
 <% else @ingredient.quality == "expiring" %>
 <%= image_tag ("/assets/expiring.png"), class: "img-responsive" %>
 <% end %>
+<br>
+

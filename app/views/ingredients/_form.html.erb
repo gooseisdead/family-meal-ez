@@ -3,7 +3,7 @@
 <p style = "color:red;"><%= error %></p>
     <% end %>
 <% end  %>
-
+<h1><u>Update Ingredient Inventory</u></h1>
 <%= form_for @ingredient do |f| %>
 
 <%= f.label :name %>
@@ -14,6 +14,7 @@
 <br>
 <%= f.label :quality %>
 <%= f.select :quality, options_for_select([["Select One", ""], "fresh", "day-old", "expiring", "use today"]) %>
+<br>
 
 <%= f.submit %>
 <% end %>

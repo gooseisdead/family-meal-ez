@@ -1,2 +1,25 @@
 <h1>Create Employee<h2>
 
+<% if flash[:errors] %>
+    <% flash[:errors].each do |error|  %>
+        <%= error %>
+    <% end %>
+<% end %>
+
+<% shifts = ["breakfast", "lunch", "dinner"] %>
+
+<%= form_for @employee do |f| %>
+    
+    <%=f.label :name %>
+    <%=f.text_field :name %>
+    <br>
+    <%=f.label :shift %>
+    <%=f.select :shift, options_for_select([["Select One", ""], "breakfast", "lunch", "dinner"]) %>
+    <br>
+    <%=f.label :job_title %>
+    <%=f.select :job_title, options_for_select([["Select One", ""], "cook", "busser", "runner", "server", "bartender"]) %>
+    <br>
+    <%=f.submit %>
+
+
+<% end %>

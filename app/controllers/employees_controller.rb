@@ -8,6 +8,35 @@ class EmployeesController < ApplicationController
     def show
     end
     
+    def new
+        @employee = Employee.new
+    end
+    
+
+    def create
+        @employee = Employee.create(employee_params)
+        if @employee.valid?
+          flash[:success] = "Employee successfully created"
+          redirect_to employees_path
+        else
+          flash[:errors] = @employee.errors.full_messages
+          redirect_to new_employee_path
+        end
+    end
+
+    def edit
+    end
+
+    def update
+        if @employee.update(employee_params)
+          flash[:success] = "Family Meal was successfully updated"
+          redirect_to employee_path(@employee)
+        else
+          flash[:errors] = @employee.errors.full_messages
+          redirect_to edit_employee_path
+        end
+    end
+    
 private
 
     def employee_params
