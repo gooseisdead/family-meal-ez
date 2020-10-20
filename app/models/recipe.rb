@@ -3,6 +3,6 @@ class Recipe < ApplicationRecord
     has_many :employees, through: :family_meals
     has_many :recipe_ingredients
     has_many :ingredients, through: :recipe_ingredients
-   
+    
 
 end
