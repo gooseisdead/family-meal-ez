@@ -1,0 +1,21 @@
+<% if flash[:errors] %>
+    <% flash[:errors].each do |error|  %>
+        <%= error %>
+    <% end %>
+<% end %>
+
+<%= form_for @family_meal do |f| %>
+    
+    <%=f.label :recipe_id %>
+    <%=f.collection_select :recipe_id, Recipe.all, :id, :name%>
+
+    <%=f.label :emloyee_id %>
+    <%=f.collection_select :employee_id, Employee.all, :id, :name%>
+
+    <%= f.label :shift %>
+    <%= f.select :shift, options_for_select([["Select One", ""], "breakfast", "lunch", "dinner"]) %>
+
+    <%= f.submit "Submit"%>
+
+<% end %>
+  
