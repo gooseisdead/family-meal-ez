@@ -1,6 +1,24 @@
-
-
-
-<% Employee.all.each do |employee|%>
-<%= employee.name %>
-<% end %>
+<h3>Breakfast Family Meal:</h3>
+<ul>
+<% @family_meals.each do |family_meal| %>
+    <% if family_meal.shift == "breakfast" && family_meal.employee.job_title == 'cook'%>
+        <li><b><%= family_meal.recipe.name %></b>.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Cook Responsable: <b><%= family_meal.employee.name %></b></li>
+        <% end %>
+    <% end %>
+</ul>
+<h3>Lunch Family Meal:</h3>
+<ul>
+<% @family_meals.each do |family_meal| %>
+    <% if family_meal.shift == "lunch" && family_meal.employee.job_title == 'cook'%>
+        <li><b><%= family_meal.recipe.name %></b>.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Cook Responsable: <b><%= family_meal.employee.name %></b></li>
+        <% end %>
+    <% end %>
+</ul>
+<h3>Dinner Family Meal:</h3>
+<ul>
+<% @family_meals.each do |family_meal| %>
+    <% if family_meal.shift == "dinner"%>
+        <li><b><%= family_meal.recipe.name %></b>.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Cook Responsable: <b><%= family_meal.employee.name %></b></li>
+        <% end %>
+    <% end %>
+</ul>

@@ -8,8 +8,15 @@
 <%= form_for @recipe do |f| %>
   <%= f.label :name %>
   <%= f.text_field :name %>
+  <br>
   <%= f.label :description %>
   <%= f.text_area :description %>
+  <br>
   <%= f.collection_check_boxes :ingredient_ids, Ingredient.all, :id, :name %>
+  <br>
+  <br>
+  <br>
+  <%= f.label :day %>
+  <%= f.select :day, options_for_select([["Select One", ""], "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]) %><br><br>
   <%= f.submit %>
 <% end %>

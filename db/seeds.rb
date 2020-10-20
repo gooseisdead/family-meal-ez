@@ -15,17 +15,19 @@ FamilyMeal.destroy_all
 ingredient_quality = ["fresh", "day-old", "expiring", "use today"]
 jobs = ["cook", "busser", "runner", "server", "bartender"]
 shifts = ["breakfast", "lunch", "dinner"]
+days = ["Mon", "Tue", "Wed", "Thur", "Fri", "Sat", "Sun"]
+
 
 10.times do
-Recipe.create(name: Faker::Food.dish, description: Faker::Food.description)
+    Recipe.create(name: Faker::Food.dish, description: Faker::Food.description, day: days.sample, shift: shifts.sample)
 end
 
 25.times do
-Employee.create(name: Faker::Name.name, job_title: jobs.sample, shift: shifts.sample)
+    Employee.create(name: Faker::Name.name, job_title: jobs.sample, shift: shifts.sample, day: days.sample)
 end
 
 20.times do 
-Ingredient.create(name: Faker::Food.ingredient, quantity: rand(1..15), quality: ingredient_quality.sample)
+    Ingredient.create(name: Faker::Food.ingredient, quantity: rand(1..15), quality: ingredient_quality.sample)
 end
 
 30.times do

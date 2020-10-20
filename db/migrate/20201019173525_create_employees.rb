@@ -4,6 +4,7 @@ class CreateEmployees < ActiveRecord::Migration[6.0]
       t.string :name
       t.string :job_title
       t.string :shift
+      t.string :day
 
       t.timestamps
     end

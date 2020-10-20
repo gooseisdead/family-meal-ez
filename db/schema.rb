@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(version: 2020_10_19_173525) do
     t.string "name"
     t.string "job_title"
     t.string "shift"
+    t.string "day"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -46,6 +47,8 @@ ActiveRecord::Schema.define(version: 2020_10_19_173525) do
   create_table "recipes", force: :cascade do |t|
     t.string "name"
     t.string "description"
+    t.string "day"
+    t.string "shift"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
