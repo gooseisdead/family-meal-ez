@@ -7,6 +7,25 @@ class IngredientsController < ApplicationController
 
     def show
     end
+
+    def new
+        @ingredient = Ingredient.new
+    end
+
+    def create
+        @ingredient = Ingredient.create(ingredient_params)
+        if @ingredient.valid?
+          flash[:success] = "Ingredient successfully created"
+          redirect_to ingredients_path
+        else
+          flash[:errors] = @ingredient.errors.full_messages
+          redirect_to new_ingredient_path
+        end
+    end
+
+    
+
+
     
 private
 
