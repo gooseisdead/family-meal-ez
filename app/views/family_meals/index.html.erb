@@ -2,7 +2,7 @@
 <ul>
 <% @family_meals.each do |family_meal| %>
     <% if family_meal.shift == "breakfast" && family_meal.employee.job_title == 'cook'%>
-        <li><b><%= family_meal.recipe.name %></b>.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Cook Responsable: <b><%= family_meal.employee.name %></b></li>
+        <ul><b><%= family_meal.recipe.name %></b>.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Cook Responsible: <b><%= family_meal.employee.name %></b></ul>
         <% end %>
     <% end %>
 </ul>
@@ -10,15 +10,15 @@
 <ul>
 <% @family_meals.each do |family_meal| %>
     <% if family_meal.shift == "lunch" && family_meal.employee.job_title == 'cook'%>
-        <li><b><%= family_meal.recipe.name %></b>.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Cook Responsable: <b><%= family_meal.employee.name %></b></li>
+        <ul><b><%= family_meal.recipe.name %></b>.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Cook Responsible: <b><%= family_meal.employee.name %></b></ul>
         <% end %>
     <% end %>
 </ul>
 <h3>Dinner Family Meal:</h3>
 <ul>
 <% @family_meals.each do |family_meal| %>
-    <% if family_meal.shift == "dinner"%>
-        <li><b><%= family_meal.recipe.name %></b>.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Cook Responsable: <b><%= family_meal.employee.name %></b></li>
+    <% if family_meal.shift == "dinner" && family_meal.employee.job_title == 'cook'%>
+        <ul><b><%= family_meal.recipe.name %></b>.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Cook Responsible: <b><%= family_meal.employee.name %></b></ul>
         <% end %>
     <% end %>
 </ul>

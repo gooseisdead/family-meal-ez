@@ -4,8 +4,4 @@
 <li><%= link_to recipe.name, recipe_path(recipe) %></li>
 <% end %>
 
-<% @recipes.each do |recipe| %>
-<% if recipe.day == "Sun"%>
-<li><%= recipe.day %></li>
-    <% end %>
-<% end %>
+

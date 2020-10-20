@@ -1,27 +1,35 @@
-<h2>Breakfast</h2>
+<h1><u>Family Meal Menu</u></h1>
+
+<h1>Breakfast</h1>
 <% @employees.map do |employee| %>
 <% if employee.shift == "breakfast" %>
-    <li><%= link_to employee.name, employee_path(employee) %></li>
+    <ul><%= link_to employee.name, employee_path(employee) %></ul>
     <% end %>
  <% end %>
 
- <h2>Lunch</h2>
+<h1>Lunch</h1>
 <% @employees.map do |employee| %>
 <% if employee.shift == "lunch" %>
-    <li><%= link_to employee.name, employee_path(employee) %></li>
+    <ul><%= link_to employee.name, employee_path(employee) %></ul>
     <% end %>
  <% end %>
 
- <h2>Dinner</h2>
+<h1>Dinner</h1>
 <% @employees.map do |employee| %>
 <% if employee.shift == "dinner" %>
-    <li><%= link_to employee.name, employee_path(employee) %></li>
+    <ul><%= link_to employee.name, employee_path(employee) %></ul>
     <% end %>
  <% end %>
 
- <h1>Employee Roster</h1>
+<h1>Employee Roster</h1>
 
 <% @employees.each do |employee| %>
-<li><%= link_to employee.name, employee_path(employee) %></li>
+<ul><%= link_to employee.name, employee_path(employee) %></ul>
 <% end %>
-
+<br>
+<br>
+<% @employees.each do |employee| %>
+<% if employee.job_title == "cook" %>
+<ul><%= employee.name %></ul>
+    <% end %>
+<% end %>
