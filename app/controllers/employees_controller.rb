@@ -16,6 +16,7 @@ class EmployeesController < ApplicationController
     def create
         @employee = Employee.create(employee_params)
         if @employee.valid?
+          session[:employee_id] = @employee.id
           flash[:success] = "Employee successfully created"
           redirect_to employees_path
         else
@@ -40,7 +41,7 @@ class EmployeesController < ApplicationController
 private
 
     def employee_params
-        params.require(:employee).permit(:name, :job_title, :shift)
+        params.require(:employee).permit(:name, :password, :job_title, :shift)
     end
 
     def find_employees
