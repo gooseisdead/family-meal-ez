@@ -2,7 +2,18 @@
 
 <h2><%= @employee.name %></h2>
 <h3>Job Title: <%= @employee.job_title %></h3>
-<p>Shift: <%= @employee.shift %></p>
+<% if @employee.job_title == "bartender" %>
+<%= image_tag ("/assets/bartender.png"), class: "img-responsive" %>
+<% elsif @employee.job_title == "busser"%>
+<%= image_tag ("/assets/busser.png"), class: "img-responsive" %>
+<% elsif @employee.job_title == "runner"%>
+<%= image_tag ("/assets/runner.png"), class: "img-responsive" %>
+<% elsif @employee.job_title == "server"%>
+<%= image_tag ("/assets/server.png"), class: "img-responsive" %>
+<% else @employee.job_title == "cook" %>
+<%= image_tag ("/assets/cook.png"), class: "img-responsive" %>
+<% end %>
+<h3>Shift: <%= @employee.shift %></h3>
 <% if @employee.shift == "breakfast" %>
 <%= image_tag ("/assets/breakfast.png"), class: "img-responsive" %>
 <% elsif @employee.shift == "lunch"%>

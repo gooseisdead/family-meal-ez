@@ -15,7 +15,7 @@ FamilyMeal.destroy_all
 ingredient_quality = ["fresh", "day-old", "expiring", "use today"]
 jobs = ["cook", "busser", "runner", "server", "bartender"]
 shifts = ["breakfast", "lunch", "dinner"]
-days = ["Mon", "Tue", "Wed", "Thur", "Fri", "Sat", "Sun"]
+days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
 
 
 10.times do

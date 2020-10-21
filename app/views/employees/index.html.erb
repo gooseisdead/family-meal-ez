@@ -1,35 +1,114 @@
-<h1><u>Family Meal Menu</u></h1>
+<h1><u>Employees</u></h1>
 
-<h1>Breakfast</h1>
+<p><b><u>Breakfast</u></b></p>
 <% @employees.map do |employee| %>
 <% if employee.shift == "breakfast" %>
-    <ul><%= link_to employee.name, employee_path(employee) %></ul>
+    <li><%= link_to employee.name, employee_path(employee) %></ul>
     <% end %>
  <% end %>
 
-<h1>Lunch</h1>
+<p><b><u>Lunch</u></b></p>
 <% @employees.map do |employee| %>
 <% if employee.shift == "lunch" %>
-    <ul><%= link_to employee.name, employee_path(employee) %></ul>
+    <li><%= link_to employee.name, employee_path(employee) %></li>
     <% end %>
  <% end %>
 
-<h1>Dinner</h1>
+<p><b><u>Dinner</u></b></p>
 <% @employees.map do |employee| %>
 <% if employee.shift == "dinner" %>
-    <ul><%= link_to employee.name, employee_path(employee) %></ul>
+    <li><%= link_to employee.name, employee_path(employee) %></li>
     <% end %>
  <% end %>
-
-<h1>Employee Roster</h1>
-
-<% @employees.each do |employee| %>
-<ul><%= link_to employee.name, employee_path(employee) %></ul>
-<% end %>
 <br>
-<br>
+<p><b><u>Cooks</u></b></p>
 <% @employees.each do |employee| %>
 <% if employee.job_title == "cook" %>
-<ul><%= employee.name %></ul>
+<li><%= link_to employee.name, employee_path(employee) %></li>
     <% end %>
 <% end %>
+
+<br>
+<p><b><u>Bussers</u></b></p>
+<% @employees.each do |employee| %>
+<% if employee.job_title == "busser" %>
+<li><%= link_to employee.name, employee_path(employee) %></li>
+    <% end %>
+<% end %>
+<br>
+<p><b><u>Runners</u></b></p>
+<% @employees.each do |employee| %>
+<% if employee.job_title == "runner" %>
+<li><%= link_to employee.name, employee_path(employee) %></li>
+    <% end %>
+<% end %>
+<br>
+<p><b><u>Servers</u></b></p>
+<% @employees.each do |employee| %>
+<% if employee.job_title == "server" %>
+<li><%= link_to employee.name, employee_path(employee) %></li>
+    <% end %>
+<% end %>
+<br>
+<p><b><u>Bartenders</u></b></p>
+<% @employees.each do |employee| %>
+<% if employee.job_title == "bartender" %>
+<li><%= link_to employee.name, employee_path(employee) %></li>
+    <% end %>
+<% end %>
+<br>
+<p><b><u>Monday Crew</u></b></p>
+<% @employees.each do |employee| %>
+<% if employee.day == "Mon" %>
+<li><%= link_to employee.name, employee_path(employee) %></li>
+    <% end %>
+<% end %>
+<br>
+<p><b><u>Tuesday Crew</u></b></p>
+<% @employees.each do |employee| %>
+<% if employee.day == "Tue" %>
+<li><%= link_to employee.name, employee_path(employee) %></li>
+    <% end %>
+<% end %>
+<br>
+<p><b><u>Wednesday Crew</u></b></p>
+<% @employees.each do |employee| %>
+<% if employee.day == "Wed" %>
+<li><%= link_to employee.name, employee_path(employee) %></li>
+    <% end %>
+<% end %>
+<br>
+<p><b><u>Thursday Crew</u></b></p>
+<% @employees.each do |employee| %>
+<% if employee.day == "Thu" %>
+<li><%= link_to employee.name, employee_path(employee) %></li>
+    <% end %>
+<% end %>
+<br>
+<p><b><u>Friday Crew</u></b></p>
+<% @employees.each do |employee| %>
+<% if employee.day == "Fri" %>
+<li><%= link_to employee.name, employee_path(employee) %></li>
+    <% end %>
+<% end %>
+<br>
+<p><b><u>Saturday Crew</u></b></p>
+<% @employees.each do |employee| %>
+<% if employee.day == "Sat" %>
+<li><%= link_to employee.name, employee_path(employee) %></li>
+    <% end %>
+<% end %>
+<br>
+<p><b><u>Sunday Crew</u></b></p>
+<% @employees.each do |employee| %>
+<% if employee.day == "Sun" %>
+<li><%= link_to employee.name, employee_path(employee) %></li>
+    <% end %>
+<% end %>
+
+
+
+<%# <% @employees.each do |employee| %>
+<%# <ul><%= link_to employee.name, employee_path(employee)</ul> %>
+<%# <% end %>
+<%# <br> %>

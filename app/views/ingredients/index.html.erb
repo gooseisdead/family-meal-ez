@@ -4,3 +4,28 @@
 <b><p><%= link_to ingredient.name, ingredient_path(ingredient) %></p></b>
 <ol>Amount: <%= ingredient.quantity %> - Quality: ........... <i><b><%= ingredient.quality %> </i></b></ol>
 <% end %>
+<br>
+<p><u><b>Fresh Ingredients</b></u></p>
+<% @ingredients.each do |ingredient| %>
+<% if ingredient.quality == "fresh" %>
+<li><%= link_to ingredient.name, ingredient_path(ingredient) %> ........... Quantity ........... <i><b><%= ingredient.quantity %></i></b></li>
+    <% end %>
+<% end %>
+<p><u><b>Day-Old Ingredients</b></u></p>
+<% @ingredients.each do |ingredient| %>
+<% if ingredient.quality == "day-old" %>
+<li><%= link_to ingredient.name, ingredient_path(ingredient) %> ........... Quantity ........... <i><b><%= ingredient.quantity %></i></b></li>
+    <% end %>
+<% end %>
+<p><u><b>Expiriing Ingredients</b></u></p>
+<% @ingredients.each do |ingredient| %>
+<% if ingredient.quality == "expiring" %>
+<li><%= link_to ingredient.name, ingredient_path(ingredient) %> ........... Quantity ........... <i><b><%= ingredient.quantity %></i></b></li>
+    <% end %>
+<% end %>
+<p><u><b>Use-Today Ingredients</b></u></p>
+<% @ingredients.each do |ingredient| %>
+<% if ingredient.quality == "use today" %>
+<li><%= link_to ingredient.name, ingredient_path(ingredient) %> ........... Quantity ........... <i><b><%= ingredient.quantity %></i></b></li>
+    <% end %>
+<% end %>

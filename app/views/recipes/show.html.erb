@@ -8,6 +8,8 @@
 <li><%= recipe_ingredient.ingredient.name %></li>
 <% end %>
 
+<h3>Day: <%= @recipe.day %></h3>
+
 
 <%= button_to "Delete", recipe_path(@recipe), method: :delete %>
 
