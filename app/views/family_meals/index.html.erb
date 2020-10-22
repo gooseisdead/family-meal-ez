@@ -1,3 +1,10 @@
+<br>
+<% if flash[:chef_errors]%>
+<h2><%= flash[:chef_errors] %></h2>
+<% end %>
+<h1>Today's Family Meal Menu </h1>
+
+
 <h3>Breakfast Family Meal:</h3>
 <ul>
 <% @family_meals.each do |family_meal| %>

@@ -3,9 +3,13 @@
   <head>
     <title>FamilyMealEz</title>
     <div class = "nav_bar">
-    <div>
+    <div class = "nav_text">
     <%= link_to "Create New Recipe", new_recipe_path %>  ||
-    <%= link_to "See Family Meal Menu", family_meals_path %>  ||
+    <%= link_to "Family Meal Recipes", recipes_path %>  ||
+    <%= link_to "View Ingredients", ingredients_path %>  ||
+    <%= link_to "Add Ingrdient", new_ingredient_path %>  ||
+    <%= link_to "Today's Family Meal", family_meals_path %>  ||
+    <%= link_to "Today's Employee Schedule", employees_path %>  ||
     <%= link_to "Assign A Cook To Family Meal", new_family_meal_path %></div>
     </div>
 
@@ -13,8 +17,8 @@
       <p>Welcome <%= @current_employee.name %>!</p>
       <%= link_to "Log Out", logout_path, method: :delete %> 
     <% else %>
-      <%= link_to "Sign-Up", new_employee_path %> 
-      <%= link_to "Log-In", new_login_path %> 
+      <%= link_to "Sign Up", new_employee_path %> 
+      <%= link_to "Log In", new_login_path %> 
     <% end %>
 
     <%= csrf_meta_tags %>

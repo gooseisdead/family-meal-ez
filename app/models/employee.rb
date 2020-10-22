@@ -4,5 +4,8 @@ class Employee < ApplicationRecord
 
     has_secure_password
 
-   
+    validates :name, :shift, :job_title, presence: true
+    
+    
+
 end

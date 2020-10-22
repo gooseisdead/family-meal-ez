@@ -53,8 +53,9 @@ private
     
     def chef_check
       if @current_employee.job_title != "chef"
+          flash[:chef_errors] = "Access Denied."
           redirect_to family_meals_path
       end
-  end
+    end
 
 end

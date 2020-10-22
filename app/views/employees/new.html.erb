@@ -1,4 +1,4 @@
-<h1>Create Employee</h1>
+<h1>Create New Employee</h1>
 
  <% if flash[:errors] %>
      <% flash[:errors].each do |error|  %> 
@@ -6,7 +6,7 @@
      <% end %> 
  <% end %>  
 
-<% shifts = ["breakfast", "lunch", "dinner"] %>
+
 <div class = "new_emp_form">
 <div>
 <h2><%= form_for @employee do |f| %>
@@ -18,10 +18,10 @@
     <%=f.password_field :password %>
     <br>
     <%=f.label :shift %>
-    <%=f.select :shift, options_for_select([["Select One", ""], "breakfast", "lunch", "dinner"]) %>
+    <%=f.select :shift, options_for_select([["Select One", ""], "Breakfast", "Lunch", "Dinner"]) %>
     <br>
     <%=f.label :job_title %>
-    <%=f.select :job_title, options_for_select([["Select One", ""], "cook", "busser", "runner", "server", "bartender", "chef"]) %>
+    <%=f.select :job_title, options_for_select([["Select One", ""], "Cook", "Busser", "Runner", "Server", "Bartender", "Chef"]) %>
     <br>
     <%=f.submit %></h2>
         </div>
