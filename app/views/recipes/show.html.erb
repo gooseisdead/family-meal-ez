@@ -1,12 +1,82 @@
 <h1><u>Recipe Details</u></h1>
+
+<% fruits = [] %>
+<% Ingredient.all.each do |ingredient| %>
+<% if ingredient.category == "fruits" && ingredient.quantity != 0 %>
+<% fruits << ingredient %>
+    <% end %>
+<% end %>
+
+<% vegetables = [] %>
+<% Ingredient.all.each do |ingredient| %>
+<% if ingredient.category == "vegetables" && ingredient.quantity != 0 %>
+<% vegetables << ingredient %>
+    <% end %>
+<% end %>
+
+<% canned_goods = [] %>
+<% Ingredient.all.each do |ingredient| %>
+<% if ingredient.category == "canned goods" && ingredient.quantity != 0 %>
+<% canned_goods << ingredient %>
+    <% end %>
+<% end %>
+
+<% use_todays = [] %>
+<% Ingredient.all.each do |ingredient| %>
+<% if ingredient.quality == "use today" && ingredient.quantity != 0 %>
+<% use_todays << ingredient %>
+    <% end %>
+<% end %>
+
+<% expirings = [] %>
+<% Ingredient.all.each do |ingredient| %>
+<% if ingredient.quality == "expiring" && ingredient.quantity != 0 %>
+<% expirings << ingredient %>
+    <% end %>
+<% end %>
+
+<% dayolds = [] %>
+<% Ingredient.all.each do |ingredient| %>
+<% if ingredient.quality == "day-old" && ingredient.quantity != 0 %>
+<% dayolds << ingredient %>
+    <% end %>
+<% end %>
+
+
 <h2><%= @recipe.name %></h2>
 <h3>Description </h3>
 <p><%= @recipe.description %></p> 
-
-<h2>Ingredients</h2>
+<h2><u>Ingredients</u></h2>
+<div class = "rec_ing_details">
 <% @recipe.recipe_ingredients.each do |recipe_ingredient| %>
-<p><%= recipe_ingredient.ingredient.name %></p>
+<div><% if recipe_ingredient.ingredient.category == "fruit" %>
+<%= image_tag ("/assets/fruits.png"), class: "img-responsive", size: "90x90" %>
+<p><%= link_to recipe_ingredient.ingredient.name, ingredient_path(recipe_ingredient.ingredient.id) %></p>
+<p>Amount Available: <%= recipe_ingredient.ingredient.quantity %></p></div>
+<div><% elsif recipe_ingredient.ingredient.category == "vegetable" %>
+<%= image_tag ("/assets/vegetables.png"), class: "img-responsive", size: "90x90" %>
+<p><%= link_to recipe_ingredient.ingredient.name, ingredient_path(recipe_ingredient.ingredient.id) %></p>
+<p>Amount Available: <%= recipe_ingredient.ingredient.quantity %></p></div>
+<div><% elsif recipe_ingredient.ingredient.category == "canned goods" %>
+<%= image_tag ("/assets/expiring.png"), class: "img-responsive", size: "90x90" %>
+<p><%= link_to recipe_ingredient.ingredient.name, ingredient_path(recipe_ingredient.ingredient.id) %></p>
+<p>Amount Available: <%= recipe_ingredient.ingredient.quantity %></p></div>
+<div><% elsif recipe_ingredient.ingredient.category == "day_old" %>
+<%= image_tag ("/assets/day_old.png"), class: "img-responsive", size: "90x90" %>
+<p><%= link_to recipe_ingredient.ingredient.name, ingredient_path(recipe_ingredient.ingredient.id) %></p>
+<p>Amount Available: <%= recipe_ingredient.ingredient.quantity %></p></div>
+<div><% elsif recipe_ingredient.ingredient.category == "spices" %>
+<%= image_tag ("/assets/spices.png"), class: "img-responsive", size: "90x90" %>
+<p><%= link_to recipe_ingredient.ingredient.name, ingredient_path(recipe_ingredient.ingredient.id) %></p>
+<p>Amount Available: <%= recipe_ingredient.ingredient.quantity %></p></div>
+<div><% else recipe_ingredient.ingredient.category == nil %>
+<%= image_tag ("/assets/qmark.png"), class: "img-responsive", size: "90x90" %>
+<p><%= link_to recipe_ingredient.ingredient.name, ingredient_path(recipe_ingredient.ingredient.id) %></p>
+<p>Amount Available: <%= recipe_ingredient.ingredient.quantity %></p></div>
+    <% end %>
 <% end %>
+</div>
+<hr>
 
 
 <%= button_to "Delete", recipe_path(@recipe), method: :delete %>

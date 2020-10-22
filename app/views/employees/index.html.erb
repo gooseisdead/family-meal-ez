@@ -5,7 +5,7 @@
 <p><b><u>Breakfast</u></b></p>
 <% @employees.map do |employee| %>
 <% if employee.shift == "breakfast" %>
-    <p><%= link_to employee.name, employee_path(employee) %><p><p>-<%= employee.job_title %></p>
+    <p><%= link_to employee.name, employee_path(employee) %><p>
     <% end %>
  <% end %></div>
 
@@ -13,7 +13,7 @@
 <p><b><u>Lunch</u></b></p>
 <% @employees.map do |employee| %>
 <% if employee.shift == "lunch" %>
-    <p><%= link_to employee.name, employee_path(employee) %></p><p>-<%= employee.job_title %></p>
+    <p><%= link_to employee.name, employee_path(employee) %></p>
     <% end %>
  <% end %></div>
 
@@ -21,7 +21,7 @@
 <p><b><u>Dinner</u></b></p>
 <% @employees.map do |employee| %>
 <% if employee.shift == "dinner" %>
-    <p><%= link_to employee.name, employee_path(employee) %></p><p>-<%= employee.job_title %></p>
+    <p><%= link_to employee.name, employee_path(employee) %></p>
     <% end %>
  <% end %></div>
  </div>

@@ -18,23 +18,118 @@
      /* border: 1px solid black; */
     font-family: Arial, Helvetica, sans-serif;
  }
+ .nav {
+    background-color: rgb(236, 233, 233);
+    height: 40px;
+    width: 100%;
+    margin: 0px auto;
+  }
+  
+   .nav li {
+     border: 2px solid rgb(71, 65, 124);
+     border-radius: 25px;
+     display: inline-block;
+     line-height: 35px;
+     padding: 0px 25px;
+     margin: auto;
+  
+   }
+  
+   .nav li:hover {
+     background-color: rgb(219, 213, 213);
+     transition: 1s;
+   }
+  
+   .nav li a {
+    text-decoration: none;
+    color: #43609e;
+    font-weight: 800;
+  }
+  
+  .user {
+    border: 1px solid rgb(71, 65, 124);
+    float: right;
+    margin-right: 5%;
+    background-color:  rgb(236, 233, 233);
+    background-position: center;
+    padding: 10px;
+}
+
+.user ul {
+    border: 1px solid rgb(71, 65, 124);
+    border-radius: 25px;
+    display: center;
+    line-height: 20px;
+    padding: 5px 5px;
+    margin: auto;
+ 
+  }
+ 
+  .user ul:hover {
+    background-color: rgb(219, 213, 213);
+    transition: 1s;
+  }
+ 
+  .user ul a {
+   text-decoration: none;
+   color: #43609e;
+   font-weight: 800;
+ }
+
+.login {
+    float: right;
+    margin-right: 5%;
+    background-color:  rgb(236, 233, 233);
+    background-position: center;
+    padding: 5px;
+}
+
+.login ul {
+    border: 1px solid rgb(71, 65, 124);
+    border-radius: 25px;
+    display: center;
+    line-height: 20px;
+    padding: 5px 25px;
+    margin: auto;
+ 
+  }
+ 
+  .login ul:hover {
+    background-color: rgb(219, 213, 213);
+    transition: 1s;
+  }
+ 
+  .login li a {
+   text-decoration: none;
+   color: #43609e;
+   font-weight: 800;
+ }
 
  body {
     background-color: lightblue;
     text-align: center;
-    /* margin-top: 100px;
+    margin-top: 100px;
     margin-bottom: 100px;
-    margin-right: 80px;
-    margin-left: 80px;  */
+    margin-right: 0px;
+    margin-left: 0px;
 }
 
-form {
+#header {
+    background-color: lightblue;
+    text-align: center;
+    text-underline-position: center;
+    padding: 4px 100px;
+
+}
+
+
+/* form {
     display: inline-block;
-    /* margin-top: 100px;
+    margin-top: 100px;
     margin-bottom: 100px;
     margin-right: 80px;
-    margin-left: 80px; */
-}
+    margin-left: 80px;
+} */
 
 #box {
     display: flex;
@@ -42,6 +137,11 @@ form {
     margin: 0 -5px;
 }
 .uses {
+    justify-content: center;
+    display: flex;
+}
+
+.uses_2 {
     justify-content: center;
     display: flex;
 }
@@ -73,15 +173,10 @@ form {
     margin: 25px;
 }
 
-.nav_bar {
-    background-color: rgb(95, 172, 223);
-    height: 40px
-}
-
 .new_emp_form {
     display: inline-flex;
     flex-wrap: wrap;
-    background-color: rgb(95, 172, 223);
+    background-color:  #5bbce9 );
     padding: 40px;
 
 }
@@ -89,20 +184,20 @@ form {
 .emp_login {
     display: inline-flex;
     flex-wrap: wrap;
-    background-color: rgb(95, 172, 223);
+    background-color: #5bbce9);
     padding: 40px;
 }
 
 .new_fam_meal {
     display: inline-flex;
     flex-wrap: wrap;
-    background-color: rgb(95, 172, 223);
+    background-color: #5bbce9);
     padding: 40px;
 }
 .new_rec_form {
     display: inline-flex;
     flex-wrap: wrap;
-    background-color: rgb(95, 172, 223);
+    background-color:  #5bbce9);
     padding: 10px;
 }
 
@@ -122,5 +217,17 @@ form {
 .ing_details > div {
     margin: 25px;
 }
+
+.rec_ing_details {
+    display: inline-flex;
+    flex-wrap: wrap;
+}
+  
+.rec_ing_details > div {
+    margin: 25px;
+}
+
+
+
 
   

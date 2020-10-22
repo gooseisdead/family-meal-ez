@@ -1,11 +1,10 @@
-<h1>Employee Login</h1>
-
 <% if flash[:login_error] %>
     <%= flash[:login_error] %>
 <% end %>
 <div class = "emp_login ">
 <div>
-    <h2>
+    <h2>Employee Login</h2>
+
 <%= form_for :session do |f| %>
     <%= f.label :name %>
     <%= f.text_field :name %>

@@ -14,6 +14,8 @@
 <%= image_tag ("/assets/vegetables.png"), class: "img-responsive" %>
 <% elsif @ingredient.category == "canned goods"%>
 <%= image_tag ("/assets/canned_goods.png"), class: "img-responsive" %>
+<% elsif @ingredient.category == "spices"%>
+<%= image_tag ("/assets/spices.png"), class: "img-responsive" %>
 <% else @ingredient.category == nil %>
 <%= image_tag ("/assets/qmark.png"), class: "img-responsive" %>
 <% end %>

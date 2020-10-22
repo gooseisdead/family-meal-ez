@@ -31,6 +31,29 @@ end
     Ingredient.create(name: Faker::Food.fruits, quantity: rand(1..15), quality: ingredient_quality.sample, category: "fruits")
 end
 
+Ingredient.create(name: "Milk" , quantity: rand(1..15), quality: ingredient_quality.sample, category: "dairy")
+Ingredient.create(name: "Eggs" , quantity: rand(1..15), quality: ingredient_quality.sample, category: "dairy")
+Ingredient.create(name: "Challah Bread" , quantity: rand(1..15), quality: ingredient_quality.sample, category: "dairy")
+Ingredient.create(name: "Heavy Cream" , quantity: rand(1..15), quality: ingredient_quality.sample, category: "dairy")
+Ingredient.create(name: "Cheddar Cheese" , quantity: rand(1..15), quality: ingredient_quality.sample, category: "dairy")
+Ingredient.create(name: "Pancake Mix" , quantity: rand(1..15), quality: ingredient_quality.sample, category: "dairy")
+Ingredient.create(name: "Pastry Dough" , quantity: rand(1..15), quality: ingredient_quality.sample, category: "dairy")
+Ingredient.create(name: "Taco Shells" , quantity: rand(1..15), quality: ingredient_quality.sample, category: "dairy")
+
+Ingredient.create(name: "Ground Beef" , quantity: rand(1..15), quality: ingredient_quality.sample, category: "meats")
+Ingredient.create(name: "Halibut" , quantity: rand(1..15), quality: ingredient_quality.sample, category: "meats")
+Ingredient.create(name: "Ground Pork" , quantity: rand(1..15), quality: ingredient_quality.sample, category: "meats")
+Ingredient.create(name: "Tripe" , quantity: rand(1..15), quality: ingredient_quality.sample, category: "meats")
+Ingredient.create(name: "Chicken Cutlets" , quantity: rand(1..15), quality: ingredient_quality.sample, category: "meats")
+Ingredient.create(name: "Pork Chops" , quantity: rand(1..15), quality: ingredient_quality.sample, category: "meats")
+Ingredient.create(name: "Hot Dogs" , quantity: rand(1..15), quality: ingredient_quality.sample, category: "meats")
+Ingredient.create(name: "Salisbury Steak" , quantity: rand(1..15), quality: ingredient_quality.sample, category: "meats")
+
+Ingredient.create(name: "Steamed Vegetables" , quantity: rand(1..15), quality: ingredient_quality.sample, category: "leftovers")
+Ingredient.create(name: "Mashed Potatoes" , quantity: rand(1..15), quality: ingredient_quality.sample, category: "leftovers")
+Ingredient.create(name: "Vegetable Dumplings" , quantity: rand(1..15), quality: ingredient_quality.sample, category: "leftovers")
+
+
 Ingredient.create(name: "Tomato Paste" , quantity: rand(1..15), quality: ingredient_quality.sample, category: "canned goods")
 Ingredient.create(name: "Tuna" , quantity: rand(1..15), quality: ingredient_quality.sample, category: "canned goods")
 Ingredient.create(name: "Kidney Beans" , quantity: rand(1..15), quality: ingredient_quality.sample, category: "canned goods")
@@ -39,6 +62,7 @@ Ingredient.create(name: "Creamed Corn" , quantity: rand(1..15), quality: ingredi
 Ingredient.create(name: "Refried Beans" , quantity: rand(1..15), quality: ingredient_quality.sample, category: "canned goods")
 Ingredient.create(name: "Peaches" , quantity: rand(1..15), quality: ingredient_quality.sample, category: "canned goods")
 Ingredient.create(name: "White Gravy" , quantity: rand(1..15), quality: ingredient_quality.sample, category: "canned goods")
+
 
 
 20.times do 
