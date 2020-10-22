@@ -1,4 +1,5 @@
 class RecipeIngredientsController < ApplicationController
+  before_action :chef_check
 
     def new
         @recipe_ingredient = RecipeIngredient.new 
@@ -15,4 +16,13 @@ class RecipeIngredientsController < ApplicationController
           redirect_to new_recipe_ingredient_path
         end
     end
+
+private
+
+    def chef_check
+      if @current_employee.job_title != "chef"
+          redirect_to family_meals_path
+      end
+    end
+
 end

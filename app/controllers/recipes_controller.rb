@@ -1,5 +1,6 @@
 class RecipesController < ApplicationController
     before_action :find_recipes, only: [:edit, :update, :show, :destroy]
+    before_action :chef_check
 
     def index
         @recipes = Recipe.all
@@ -10,7 +11,9 @@ class RecipesController < ApplicationController
 
     def new
         @recipe = Recipe.new
-        
+        # if @current_employee.job_title != "chef"
+        #     redirect_to family_meals_path
+        # end
     end
     
 
@@ -53,6 +56,12 @@ private
 
     def find_recipes
         @recipe = Recipe.find(params[:id])
+    end
+    
+    def chef_check
+        if @current_employee.job_title != "chef"
+            redirect_to family_meals_path
+        end
     end
     
 end

@@ -1,10 +1,9 @@
 <h1><u>Add New Ingredient</u></h1>
 <%= form_for @ingredient do |f| %>
-<%= f.label :name %>
-<%= f.text_field :name %>
-<br>
-<%= f.label :category %>
-<%= f.select :shift, options_for_select([["Select One", ""], "fruit", "vegetable", "canned goods"]) %>
-<%= render 'form' %>
-
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <br>
+    <%= f.label :category %>
+    <%= f.select :category, options_for_select([["Select One", ""], "fruit", "vegetable", "canned goods"]) %>
+    <%= render 'form' %>
 <% end %>

@@ -25,6 +25,8 @@ end
     Employee.create(name: Faker::Name.name, job_title: jobs.sample, shift: shifts.sample, day: days.sample)
 end
 
+    # Employee.create(name: "Greg", job_title: "Chef", shift: shifts.sample, day: days.sample)
+
 20.times do 
     Ingredient.create(name: Faker::Food.fruits, quantity: rand(1..15), quality: ingredient_quality.sample, category: "fruits")
 end

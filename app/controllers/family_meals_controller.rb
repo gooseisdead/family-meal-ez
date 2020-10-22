@@ -1,5 +1,6 @@
 class FamilyMealsController < ApplicationController
     before_action :find_family_meals, only: [:edit, :update, :show, :destroy]
+    before_action :chef_check, only: [:edit, :update, :show, :destory, :new, :create]
 
     def index
         @family_meals = FamilyMeal.all
@@ -49,5 +50,11 @@ private
     def find_family_meals
         @family_meal = FamilyMeal.find(params[:id])
     end
+    
+    def chef_check
+      if @current_employee.job_title != "chef"
+          redirect_to family_meals_path
+      end
+  end
     
 end

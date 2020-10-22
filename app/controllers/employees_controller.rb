@@ -1,5 +1,8 @@
 class EmployeesController < ApplicationController
     before_action :find_employees, only: [:edit, :update, :show, :destroy]
+    before_action :chef_check
+    # skip_before_action :authorized?, only: [:new, :create]
+
 
     def index
         @employees = Employee.all
@@ -48,4 +51,10 @@ private
         @employee = Employee.find(params[:id])
     end
     
+    def chef_check
+      if @current_employee.job_title != "chef"
+          redirect_to family_meals_path
+      end
+  end
+
 end

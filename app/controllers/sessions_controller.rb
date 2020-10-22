@@ -1,4 +1,5 @@
 class SessionsController < ApplicationController
+    skip_before_action :authorized?, only: [:new_login, :login] 
 
     def logout
        session.delete(:employee_id)
