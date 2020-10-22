@@ -5,7 +5,6 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-
 Ingredient.destroy_all
 Recipe.destroy_all
 RecipeIngredient.destroy_all
@@ -18,7 +17,7 @@ shifts = ["breakfast", "lunch", "dinner"]
 days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
 
 
-10.times do
+15.times do
     Recipe.create(name: Faker::Food.dish, description: Faker::Food.description, day: days.sample, shift: shifts.sample)
 end
 
@@ -27,11 +26,29 @@ end
 end
 
 20.times do 
-    Ingredient.create(name: Faker::Food.ingredient, quantity: rand(1..15), quality: ingredient_quality.sample)
+    Ingredient.create(name: Faker::Food.fruits, quantity: rand(1..15), quality: ingredient_quality.sample, category: "fruits")
+end
+
+Ingredient.create(name: "Tomato Paste" , quantity: rand(1..15), quality: ingredient_quality.sample, category: "canned goods")
+Ingredient.create(name: "Tuna" , quantity: rand(1..15), quality: ingredient_quality.sample, category: "canned goods")
+Ingredient.create(name: "Kidney Beans" , quantity: rand(1..15), quality: ingredient_quality.sample, category: "canned goods")
+Ingredient.create(name: "Cream of Mushroom" , quantity: rand(1..15), quality: ingredient_quality.sample, category: "canned goods")
+Ingredient.create(name: "Creamed Corn" , quantity: rand(1..15), quality: ingredient_quality.sample, category: "canned goods")
+Ingredient.create(name: "Refried Beans" , quantity: rand(1..15), quality: ingredient_quality.sample, category: "canned goods")
+Ingredient.create(name: "Peaches" , quantity: rand(1..15), quality: ingredient_quality.sample, category: "canned goods")
+Ingredient.create(name: "White Gravy" , quantity: rand(1..15), quality: ingredient_quality.sample, category: "canned goods")
+
+
+20.times do 
+    Ingredient.create(name: Faker::Food.spice, quantity: rand(1..15), quality: ingredient_quality.sample, category: "spices")
+end
+
+20.times do 
+    Ingredient.create(name: Faker::Food.vegetables, quantity: rand(1..15), quality: ingredient_quality.sample, category: "vegetables")
 end
 
 30.times do
-FamilyMeal.create(recipe_id: Recipe.all.sample.id, employee_id: Employee.all.sample.id, shift: shifts.sample)
+FamilyMeal.create(recipe_id: Recipe.all.sample.id, employee_id: nil, shift: shifts.sample)
 end
 
 30.times do

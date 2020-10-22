@@ -2,9 +2,12 @@
 <html>
   <head>
     <title>FamilyMealEz</title>
+    <div class = "nav_bar">
+    <div>
     <%= link_to "Create New Recipe", new_recipe_path %>  ||
     <%= link_to "See Family Meal Menu", family_meals_path %>  ||
-    <%= link_to "Assign A Cook To Family Meal", new_family_meal_path %>  ||
+    <%= link_to "Assign A Cook To Family Meal", new_family_meal_path %></div>
+    </div>
 
     <% if @current_employee %>
       <p>Welcome <%= @current_employee.name %>!</p>

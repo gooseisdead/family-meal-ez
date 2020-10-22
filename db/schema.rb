@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(version: 2020_10_21_170710) do
     t.string "name"
     t.integer "quantity"
     t.string "quality"
+    t.string "category"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

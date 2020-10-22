@@ -1,58 +1,5 @@
 <h1><u>Recipes List</u></h1>
 
 <% @recipes.each do |recipe| %>
-<li><%= link_to recipe.name, recipe_path(recipe) %></li>
+<p><%= link_to recipe.name, recipe_path(recipe) %><p>
 <% end %>
-<br>
-<p><b><u>Monday</u></b></p>
-<% @recipes.each do |recipe| %>
-<% if recipe.day == "Mon" %>
-<li><%= link_to recipe.name, recipe_path(recipe) %> - <%= recipe.shift %></li>
-    <% end %>
-<% end %>
-<br>
-<p><b><u>Tuesday</u></b></p>
-<% @recipes.each do |recipe| %>
-<% if recipe.day == "Tue" %>
-<li><%= link_to recipe.name, recipe_path(recipe) %> - <%= recipe.shift %></li>
-    <% end %>
-<% end %>
-<br>
-<p><b><u>Wednesday</u></b></p>
-<% @recipes.each do |recipe| %>
-<% if recipe.day == "Wed" %>
-<li><%= link_to recipe.name, recipe_path(recipe) %> - <%= recipe.shift %></li>
-    <% end %>
-<% end %>
-<br>
-<p><b><u>Thursday</u></b></p>
-<% @recipes.each do |recipe| %>
-<% if recipe.day == "Thu" %>
-<li><%= link_to recipe.name, recipe_path(recipe) %> - <%= recipe.shift %></li>
-    <% end %>
-<% end %>
-<br>
-<p><b><u>Friday</u></b></p>
-<% @recipes.each do |recipe| %>
-<% if recipe.day == "Fri" %>
-<li><%= link_to recipe.name, recipe_path(recipe) %> - <%= recipe.shift %></li>
-    <% end %>
-<% end %>
-<br>
-<p><b><u>Saturday</u></b></p>
-<% @recipes.each do |recipe| %>
-<% if recipe.day == "Sat" %>
-<li><%= link_to recipe.name, recipe_path(recipe) %> - <%= recipe.shift %></li>
-    <% end %>
-<% end %>
-<br>
-<p><b><u>Sunday</u></b></p>
-<% @recipes.each do |recipe| %>
-<% if recipe.day == "Sun" %>
-<li><%= link_to recipe.name, recipe_path(recipe) %> - <%= recipe.shift %></li>
-    <% end %>
-<% end %>
-<br>
-
-
-

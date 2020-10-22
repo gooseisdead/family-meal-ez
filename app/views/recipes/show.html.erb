@@ -1,14 +1,12 @@
-<h1>Recipe Details</h1>
-
+<h1><u>Recipe Details</u></h1>
 <h2><%= @recipe.name %></h2>
-<p>Description: <br><%= @recipe.description %></p> <br><br><br>
+<h3>Description </h3>
+<p><%= @recipe.description %></p> 
 
 <h2>Ingredients</h2>
 <% @recipe.recipe_ingredients.each do |recipe_ingredient| %>
-<li><%= recipe_ingredient.ingredient.name %></li>
+<p><%= recipe_ingredient.ingredient.name %></p>
 <% end %>
-
-<h3>Day: <%= @recipe.day %></h3>
 
 
 <%= button_to "Delete", recipe_path(@recipe), method: :delete %>

@@ -3,7 +3,15 @@
 <p style = "color:red;"><%= error %></p>
     <% end %>
 <% end  %>
-<h1><u>Update Ingredient Inventory</u></h1>
+<h2><%= @ingredient.name %></h2>
+<% if @ingredient.category == "fruits" %>
+<%= image_tag ("/assets/fruits.png"), class: "img-responsive" %>
+<% elsif @ingredient.category == "vegetables"%>
+<%= image_tag ("/assets/vegetables.png"), class: "img-responsive" %>
+<% else @ingredient.category == nil %>
+<%= image_tag ("/assets/qmark.png"), class: "img-responsive" %>
+<% end %>
+<br>
 <%= form_for @ingredient do |f| %>
 
 <%= f.label :quantity %>

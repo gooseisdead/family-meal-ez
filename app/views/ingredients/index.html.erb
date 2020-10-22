@@ -29,3 +29,17 @@
 <li><%= link_to ingredient.name, ingredient_path(ingredient) %> ........... Quantity ........... <i><b><%= ingredient.quantity %></i></b></li>
     <% end %>
 <% end %>
+
+<p><u><b>Fruits</b></u></p>
+<% @ingredients.each do |ingredient| %>
+<% if ingredient.category == "fruits" %>
+<li><%= link_to ingredient.name, ingredient_path(ingredient) %> ........... Quantity ........... <i><b><%= ingredient.quantity %></i></b></li>
+    <% end %>
+<% end %>
+<br>
+<p><u><b>Vegetables</b></u></p>
+<% @ingredients.each do |ingredient| %>
+<% if ingredient.category == "vegetables" %>
+<li><%= link_to ingredient.name, ingredient_path(ingredient) %> ........... Quantity ........... <i><b><%= ingredient.quantity %></i></b></li>
+    <% end %>
+<% end %>

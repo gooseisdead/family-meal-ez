@@ -16,16 +16,60 @@
  body {
     background-color: lightblue;
     text-align: center;
-    margin-top: 100px;
+    /* margin-top: 100px;
     margin-bottom: 100px;
     margin-right: 80px;
-    margin-left: 80px;
-}
-form {
-    display: inline-block;
-    margin-top: 100px;
-    margin-bottom: 100px;
-    margin-right: 80px;
-    margin-left: 80px;
+    margin-left: 80px;  */
 }
 
+form {
+    display: inline-block;
+    /* margin-top: 100px;
+    margin-bottom: 100px;
+    margin-right: 80px;
+    margin-left: 80px; */
+}
+
+#box {
+    display: flex;
+    width: 100px;
+    margin: 0 -5px;
+}
+.uses {
+    justify-content: center;
+    display: flex;
+}
+
+.emp_shifts {
+    display: inline-flex;
+    flex-wrap: wrap;
+}
+  
+.emp_shifts > div {
+    margin: 25px;
+}
+
+.staff {
+    display: inline-flex;
+    flex-wrap: wrap;
+}
+  
+.staff > div {
+    margin: 25px;
+}
+
+.emp_profiles {
+    display: inline-flex;
+    flex-wrap: wrap;
+}
+  
+.emp_profiles > div {
+    margin: 25px;
+}
+
+.nav_bar {
+    background-color: rgb(95, 172, 223);
+    height: 40px
+}
+
+  

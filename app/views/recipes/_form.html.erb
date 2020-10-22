@@ -4,6 +4,47 @@
     <% end %>
 <% end  %>
 
+<% fruits = [] %>
+<% Ingredient.all.each do |ingredient| %>
+<% if ingredient.category == "fruits" && ingredient.quantity != 0 %>
+<% fruits << ingredient %>
+    <% end %>
+<% end %>
+
+<% vegetables = [] %>
+<% Ingredient.all.each do |ingredient| %>
+<% if ingredient.category == "vegetables" && ingredient.quantity != 0 %>
+<% vegetables << ingredient %>
+    <% end %>
+<% end %>
+
+<% canned_goods = [] %>
+<% Ingredient.all.each do |ingredient| %>
+<% if ingredient.category == "canned goods" && ingredient.quantity != 0 %>
+<% canned_goods << ingredient %>
+    <% end %>
+<% end %>
+
+<% use_todays = [] %>
+<% Ingredient.all.each do |ingredient| %>
+<% if ingredient.quality == "use today" && ingredient.quantity != 0 %>
+<% use_todays << ingredient %>
+    <% end %>
+<% end %>
+
+<% expirings = [] %>
+<% Ingredient.all.each do |ingredient| %>
+<% if ingredient.quality == "expiring" && ingredient.quantity != 0 %>
+<% expirings << ingredient %>
+    <% end %>
+<% end %>
+
+<% dayolds = [] %>
+<% Ingredient.all.each do |ingredient| %>
+<% if ingredient.quality == "day-old" && ingredient.quantity != 0 %>
+<% dayolds << ingredient %>
+    <% end %>
+<% end %>
 
 <%= form_for @recipe do |f| %>
   <%= f.label :name %>
@@ -12,11 +53,28 @@
   <%= f.label :description %>
   <%= f.text_area :description %>
   <br>
-  <%= f.collection_check_boxes :ingredient_ids, Ingredient.all, :id, :name %>
+  <%= f.label :shift %>
+  <%= f.select :shift, options_for_select([["Select One", ""], "breakfast", "lunch", "dinner"]) %>
   <br>
-  <br>
-  <br>
-  <%= f.label :day %>
-  <%= f.select :day, options_for_select([["Select One", ""], "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]) %><br><br>
+  <hr>
+  <div class = "uses">
+  <div><%= image_tag ("/assets/urgent.png"), class: "img-responsive", size: "80x80" %>
+    <h2>Use Today!</h2>
+    <%= f.collection_select(:ingredient_ids, use_todays, :id, :name, {:prompt => "...mulitselect..."}, {:multiple => true, :style => "width:300px", :style => "height:300px"}) %></div>
+  <div><%= image_tag ("/assets/day_old.png"), class: "img-responsive", size: "80x80" %>
+    <h2>Day-Old</h2>
+  <%= f.collection_select(:ingredient_ids, dayolds, :id, :name, {:prompt => "...mulitselect..."}, {:multiple => true, :style => "width:300px", :style => "height:300px"}) %></div>
+  <div><%= image_tag ("/assets/expiring.png"), class: "img-responsive", size: "80x80" %>
+    <h2>Expiring</h2>
+  <%= f.collection_select(:ingredient_ids, canned_goods, :id, :name, {:prompt => "...mulitselect..."}, {:multiple => true, :style => "width:300px", :style => "height:300px"}) %></div>
+  <div><%= image_tag ("/assets/fruits.png"), class: "img-responsive", size: "80x80" %>
+    <h2>Fruits</h2>
+  <%= f.collection_select(:ingredient_ids, fruits, :id, :name, {:prompt => "...mulitselect..."}, {:multiple => true, :style => "width:300px", :style => "height:300px"}) %></div>
+  <div><%= image_tag ("/assets/vegetables.png"), class: "img-responsive", size: "80x80" %>
+    <h2>Vegetables</h2>
+  <%= f.collection_select(:ingredient_ids, vegetables, :id, :name, {:prompt => "...mulitselect..."}, {:multiple => true, :style => "width:300px", :style => "height:300px"}) %>
+    </div>
+  </div>
+  <hr>
   <%= f.submit %>
 <% end %>
