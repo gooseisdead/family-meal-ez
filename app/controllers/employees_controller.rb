@@ -33,7 +33,7 @@ class EmployeesController < ApplicationController
 
     def update
         if @employee.update(employee_params)
-          flash[:success] = "Family Meal was successfully updated"
+          flash[:success] = "Employee was successfully updated"
           redirect_to employee_path(@employee)
         else
           flash[:errors] = @employee.errors.full_messages
@@ -52,7 +52,7 @@ private
     end
     
     def chef_check
-      if @current_employee.job_title != "chef"
+      if @current_employee.job_title != "Chef"
           flash[:chef_errors] = "Access Denied."
           redirect_to family_meals_path
       end

@@ -122,7 +122,7 @@
   <div><%= image_tag ("/assets/spices.png"), class: "img-responsive", size: "80x80" %>
     <h2>Spices</h2>
     <%= f.collection_select(:ingredient_ids, spices, :id, :name, {:prompt => "...mulitselect..."}, {:multiple => true, :style => "width:300px", :style => "height:300px"}) %></div>
-  <div><%= image_tag ("/assets/meat.png"), class: "img-responsive", size: "80x80" %>
+  <div><%= image_tag ("/assets/meats.png"), class: "img-responsive", size: "80x80" %>
     <h2>Meat and Fish</h2>
   <%= f.collection_select(:ingredient_ids, meats, :id, :name, {:prompt => "...mulitselect..."}, {:multiple => true, :style => "width:300px", :style => "height:300px"}) %></div>
   <div><%= image_tag ("/assets/baking.png"), class: "img-responsive", size: "80x80" %>
