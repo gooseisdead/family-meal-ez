@@ -72,4 +72,49 @@ form {
     height: 40px
 }
 
+.new_emp_form {
+    display: inline-flex;
+    flex-wrap: wrap;
+    background-color: rgb(95, 172, 223);
+    padding: 40px;
+
+}
+
+.emp_login {
+    display: inline-flex;
+    flex-wrap: wrap;
+    background-color: rgb(95, 172, 223);
+    padding: 40px;
+}
+
+.new_fam_meal {
+    display: inline-flex;
+    flex-wrap: wrap;
+    background-color: rgb(95, 172, 223);
+    padding: 40px;
+}
+.new_rec_form {
+    display: inline-flex;
+    flex-wrap: wrap;
+    background-color: rgb(95, 172, 223);
+    padding: 10px;
+}
+
+.ing_list {
+    display: inline-flex;
+    flex-wrap: wrap;
+}
+  
+.ing_list > div {
+    margin: 25px;
+}
+.ing_details {
+    display: inline-flex;
+    flex-wrap: wrap;
+}
+  
+.ing_details > div {
+    margin: 25px;
+}
+
   

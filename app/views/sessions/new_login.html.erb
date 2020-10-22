@@ -3,13 +3,18 @@
 <% if flash[:login_error] %>
     <%= flash[:login_error] %>
 <% end %>
-
+<div class = "emp_login ">
+<div>
+    <h2>
 <%= form_for :session do |f| %>
     <%= f.label :name %>
     <%= f.text_field :name %>
-
+    <br>
     <%= f.label :password %>
     <%= f.password_field :password %>
-
+    <br>
     <%= f.submit %>
 <% end %>
+    </h2>
+</div>
+</div>

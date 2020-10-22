@@ -46,6 +46,9 @@
     <% end %>
 <% end %>
 
+<div class = "new_rec_form">
+  <div>
+    <h2>
 <%= form_for @recipe do |f| %>
   <%= f.label :name %>
   <%= f.text_field :name %>
@@ -55,9 +58,12 @@
   <br>
   <%= f.label :shift %>
   <%= f.select :shift, options_for_select([["Select One", ""], "breakfast", "lunch", "dinner"]) %>
+    </h2>
+  </div>
+</div>
   <br>
-  <hr>
-  <div class = "uses">
+    <hr>
+<div class = "uses">
   <div><%= image_tag ("/assets/urgent.png"), class: "img-responsive", size: "80x80" %>
     <h2>Use Today!</h2>
     <%= f.collection_select(:ingredient_ids, use_todays, :id, :name, {:prompt => "...mulitselect..."}, {:multiple => true, :style => "width:300px", :style => "height:300px"}) %></div>
@@ -73,8 +79,8 @@
   <div><%= image_tag ("/assets/vegetables.png"), class: "img-responsive", size: "80x80" %>
     <h2>Vegetables</h2>
   <%= f.collection_select(:ingredient_ids, vegetables, :id, :name, {:prompt => "...mulitselect..."}, {:multiple => true, :style => "width:300px", :style => "height:300px"}) %>
-    </div>
   </div>
+</div>
   <hr>
   <%= f.submit %>
 <% end %>

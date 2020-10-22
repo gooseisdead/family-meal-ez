@@ -1,7 +1,7 @@
 class EmployeesController < ApplicationController
     before_action :find_employees, only: [:edit, :update, :show, :destroy]
-    before_action :chef_check
-    # skip_before_action :authorized?, only: [:new, :create]
+    # before_action :chef_check
+    skip_before_action :authorized?, only: [:new, :create]
 
 
     def index

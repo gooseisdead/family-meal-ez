@@ -5,9 +5,21 @@
  <p style = "color:green;"><%= flash[:success] %></p> 
 <% end %>
 
-<%= @ingredient.name %>
+<div class = "ing_details">
+    <div>
+<h2><%= @ingredient.name %></h2>
+<% if @ingredient.category == "fruits" %>
+<%= image_tag ("/assets/fruits.png"), class: "img-responsive" %>
+<% elsif @ingredient.category == "vegetables"%>
+<%= image_tag ("/assets/vegetables.png"), class: "img-responsive" %>
+<% elsif @ingredient.category == "canned goods"%>
+<%= image_tag ("/assets/canned_goods.png"), class: "img-responsive" %>
+<% else @ingredient.category == nil %>
+<%= image_tag ("/assets/qmark.png"), class: "img-responsive" %>
+<% end %>
+    </div>
+<div>
 <h2>Amount: <%= @ingredient.quantity %></h2>
-<p>Quality: ........... <i><b><%= @ingredient.quality %> </i></b></p>
 
 <% if @ingredient.quality == "fresh" %>
 <%= image_tag ("/assets/fresh.png"), class: "img-responsive" %>
@@ -18,5 +30,8 @@
 <% else @ingredient.quality == "expiring" %>
 <%= image_tag ("/assets/expiring.png"), class: "img-responsive" %>
 <% end %>
-<br>
+    </div>
+</div>
+<h2>Quality: ........... <i><b><%= @ingredient.quality %> </i></b></h2>
+
 

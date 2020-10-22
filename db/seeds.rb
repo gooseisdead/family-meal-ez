@@ -21,8 +21,8 @@ days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
     Recipe.create(name: Faker::Food.dish, description: Faker::Food.description, day: days.sample, shift: shifts.sample)
 end
 
-25.times do
-    Employee.create(name: Faker::Name.name, job_title: jobs.sample, shift: shifts.sample, day: days.sample)
+1.times do
+    Employee.create(name: Faker::Name.name, job_title: "chef", shift: shifts.sample, day: days.sample)
 end
 
     # Employee.create(name: "Greg", job_title: "Chef", shift: shifts.sample, day: days.sample)

@@ -1,6 +1,4 @@
-<h1>Create Employee<h2>
-
-
+<h1>Create Employee</h1>
 
  <% if flash[:errors] %>
      <% flash[:errors].each do |error|  %> 
@@ -9,8 +7,9 @@
  <% end %>  
 
 <% shifts = ["breakfast", "lunch", "dinner"] %>
-
-<%= form_for @employee do |f| %>
+<div class = "new_emp_form">
+<div>
+<h2><%= form_for @employee do |f| %>
     
     <%=f.label :name %>
     <%=f.text_field :name %>
@@ -24,7 +23,8 @@
     <%=f.label :job_title %>
     <%=f.select :job_title, options_for_select([["Select One", ""], "cook", "busser", "runner", "server", "bartender", "chef"]) %>
     <br>
-    <%=f.submit %>
-
+    <%=f.submit %></h2>
+        </div>
+    </div>
 
 <% end %>
