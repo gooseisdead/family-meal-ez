@@ -23,6 +23,16 @@
 <% end %>
     </div>
     <div> 
+
+    <%= image_tag ("/assets/stock.png"), class: "img-responsive", size: "170x170"%>
+<p>Out of Stock</p>
+<% @ingredients.each do |ingredient| %>
+<% if ingredient.quality == "out of stock" %>
+<ul><%= link_to ingredient.name, ingredient_path(ingredient) %> ........... Quantity .. <%= ingredient.quantity %></ul>
+    <% end %>
+<% end %>
+</div>
+    <div> 
 <%= image_tag ("/assets/expiring.png"), class: "img-responsive", size: "170x170"%>
 <p>Expiriing Ingredients</p>
 <% @ingredients.each do |ingredient| %>
@@ -111,16 +121,7 @@
     <% end %>
 <% end %>
 </div>
-<div> 
 
-    <%= image_tag ("/assets/stock.png"), class: "img-responsive", size: "170x170"%>
-<p>Out of Stock</p>
-<% @ingredients.each do |ingredient| %>
-<% if ingredient.quality == "out of stock" %>
-<ul><%= link_to ingredient.name, ingredient_path(ingredient) %> ........... Quantity .. <%= ingredient.quantity %></ul>
-    <% end %>
-<% end %>
-</div>
 
 </div> 
 
