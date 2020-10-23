@@ -1,73 +1,84 @@
 <h1>Employees</h1>
-
-        <br>
-    <%= image_tag ("/assets/breakfast.png"), class: "img-responsive", size: "80x80" %>
+<div id="emp_content">
+    <div class="emps">
+    <%= image_tag ("/assets/breakfast.png"), class: "img-responsive", size: "200x200" %>
     <p>Breakfast</p>
         <% @employees.map do |employee| %>
             <% if employee.shift == "Breakfast" %>
         <p><%= link_to employee.name, employee_path(employee) %><p>
             <% end %>
         <% end %>
-
-    <%= image_tag ("/assets/lunch.png"), class: "img-responsive", size: "80x80" %>
+        </div>
+    <div class="emps">
+    <%= image_tag ("/assets/lunch.png"), class: "img-responsive", size: "200x200" %>
     <p>Lunch</p>
         <% @employees.map do |employee| %>
             <% if employee.shift == "Lunch" %>
         <p><%= link_to employee.name, employee_path(employee) %></p>
         <% end %>
     <% end %>
-    
-
-    <%= image_tag ("/assets/dinner.png"), class: "img-responsive", size: "80x80" %>
+    </div>
+    <div class="emps">
+    <%= image_tag ("/assets/dinner.png"), class: "img-responsive", size: "200x200" %>
     <p>Dinner</p>
         <% @employees.map do |employee| %>
             <% if employee.shift == "Dinner" %>
         <p><%= link_to employee.name, employee_path(employee) %></p>
         <% end %>
     <% end %>
-    
+    </div>
+</div>
 
     <br>
-    <%= image_tag ("/assets/cook.png"), class: "img-responsive", size: "80x80" %>
+    <div id="emp_staff">
+    <div class="emps2">
+    <%= image_tag ("/assets/cook.png"), class: "img-responsive", size: "200x200" %>
     <p>Cooks</p>
         <% @employees.each do |employee| %>
     <% if employee.job_title == "Cook" %>
     <p><%= link_to employee.name, employee_path(employee) %></p>
         <% end %>
     <% end %>
+    </div>
         <br>
-    <%= image_tag ("/assets/busser.png"), class: "img-responsive", size: "80x80" %>
+        <div class="emps2">
+    <%= image_tag ("/assets/busser.png"), class: "img-responsive", size: "200x200" %>
     <p>Bussers</p>
         <% @employees.each do |employee| %>
     <% if employee.job_title == "Busser" %>
     <p><%= link_to employee.name, employee_path(employee) %></p>
         <% end %>
     <% end %>
-    
+    </div>
         <br>
-    <%= image_tag ("/assets/runner.png"), class: "img-responsive", size: "80x80" %>
+        <div class="emps2">
+    <%= image_tag ("/assets/runner.png"), class: "img-responsive", size: "200x200" %>
     <p>Runners</p>
         <% @employees.each do |employee| %>
     <% if employee.job_title == "Runner" %>
     <p><%= link_to employee.name, employee_path(employee) %></p>
         <% end %>
     <% end %>
-    
+    </div>
         <br>
-    <%= image_tag ("/assets/server.png"), class: "img-responsive", size: "80x80" %>
+        <div class="emps2">
+    <%= image_tag ("/assets/server.png"), class: "img-responsive", size: "200x200" %>
     <p>Servers</p>
         <% @employees.each do |employee| %>
     <% if employee.job_title == "Server" %>
     <p><%= link_to employee.name, employee_path(employee) %></p>
         <% end %>
     <% end %>
-    
+    </div>
         <br>
-    <%= image_tag ("/assets/bartender.png"), class: "img-responsive", size: "80x80" %>
+        <div class="emps2">
+    <%= image_tag ("/assets/bartender.png"), class: "img-responsive", size: "200x200" %>
     <p>Bartenders</p>
         <% @employees.each do |employee| %>
     <% if employee.job_title == "Bartender" %>
     <p><%= link_to employee.name, employee_path(employee) %></p>
         <% end %>
     <% end %>
+    </div>
+</div>
     

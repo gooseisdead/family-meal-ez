@@ -1,6 +1,7 @@
 <h1>Employee Profile</h1>
 <h2><%= @employee.name %></h2>
-
+<div id="emp_pro">
+    <div class="pros">
 <h3>Job Title: <%= @employee.job_title %></h3>
 <% if @employee.job_title == "bartender" %>
 <%= image_tag ("/assets/bartender.png"), class: "img-responsive" %>
@@ -13,6 +14,8 @@
 <% else @employee.job_title == "cook" %>
 <%= image_tag ("/assets/cook.png"), class: "img-responsive" %>
 <% end %>
+</div>
+    <div class="pros">
 <h3>Shift: <%= @employee.shift %></h3>
 <% if @employee.shift == "breakfast" %>
 <%= image_tag ("/assets/breakfast.png"), class: "img-responsive" %>
@@ -20,4 +23,5 @@
 <%= image_tag ("/assets/lunch.png"), class: "img-responsive" %>
 <% else @employee.shift == "dinner" %>
 <%= image_tag ("/assets/dinner.png"), class: "img-responsive" %>
-<% end %>
+<% end %></div>
+</div>

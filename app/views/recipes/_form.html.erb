@@ -81,50 +81,63 @@
     <% end %>
 <% end %>
 
-
+<br>
+<div class = "parent">
+<div class = "div1">
+<h1>New Recipe</h1>
 <%= form_with model: @recipe, remote: false do |f| %>
   <%= f.label :name %>
   <%= f.text_field :name %>
-  
+<br>
   <%= f.label :description, "Notes" %>
-  <%= f.text_area :description %>
+  <%= f.text_area :description, size: "80x15" %>
+<br></div>
+
   
-   
+
+
+  
+<div class = "div2">
   <%= image_tag ("/assets/urgent.png"), class: "img-responsive", size: "80x80" %>
     <h2>Use Today!</h2>
-    <%= f.collection_select(:ingredient_ids, use_todays, :id, :name, {:prompt => "...mulitselect..."}, {:multiple => true, :style => "width:300px", :style => "height:300px"}) %>
+    <%= f.collection_select(:ingredient_ids, use_todays, :id, :name, {:prompt => "...mulitselect..."}, {:multiple => true, :style => "width:300px", :style => "height:300px"}) %><br>
+  
+
+
   <%= image_tag ("/assets/day_old.png"), class: "img-responsive", size: "80x80" %>
     <h2>Day-Old</h2>
-  <%= f.collection_select(:ingredient_ids, dayolds, :id, :name, {:prompt => "...mulitselect..."}, {:multiple => true, :style => "width:300px", :style => "height:300px"}) %>
+  <%= f.collection_select(:ingredient_ids, dayolds, :id, :name, {:prompt => "...mulitselect..."}, {:multiple => true, :style => "width:300px", :style => "height:300px"}) %><br>
   <%= image_tag ("/assets/expiring.png"), class: "img-responsive", size: "80x80" %>
-    <h2>Expiring</h2>
-  <%= f.collection_select(:ingredient_ids, canned_goods, :id, :name, {:prompt => "...mulitselect..."}, {:multiple => true, :style => "width:300px", :style => "height:300px"}) %>
-  <%= image_tag ("/assets/fruits.png"), class: "img-responsive", size: "80x80" %>
-    <h2>Fruits</h2>
-  <%= f.collection_select(:ingredient_ids, fruits, :id, :name, {:prompt => "...mulitselect..."}, {:multiple => true, :style => "width:300px", :style => "height:300px"}) %>
-  <%= image_tag ("/assets/vegetables.png"), class: "img-responsive", size: "80x80" %>
-    <h2>Vegetables</h2>
-  <%= f.collection_select(:ingredient_ids, vegetables, :id, :name, {:prompt => "...mulitselect..."}, {:multiple => true, :style => "width:300px", :style => "height:300px"}) %>
   
+    <h2>Expiring</h2>
+  <%= f.collection_select(:ingredient_ids, canned_goods, :id, :name, {:prompt => "...mulitselect..."}, {:multiple => true, :style => "width:300px", :style => "height:300px"}) %><br>
+  <%= image_tag ("/assets/fruits.png"), class: "img-responsive", size: "80x80" %>
+  
+    <h2>Fruits</h2>
+  <%= f.collection_select(:ingredient_ids, fruits, :id, :name, {:prompt => "...mulitselect..."}, {:multiple => true, :style => "width:300px", :style => "height:300px"}) %><br>
+  <%= image_tag ("/assets/vegetables.png"), class: "img-responsive", size: "80x80" %>
+  </div>
 
-
+    <h2>Vegetables</h2>
+  <%= f.collection_select(:ingredient_ids, vegetables, :id, :name, {:prompt => "...mulitselect..."}, {:multiple => true, :style => "width:300px", :style => "height:300px"}) %><br>
   <%= image_tag ("/assets/spices.png"), class: "img-responsive", size: "80x80" %>
+  </div>
     <h2>Spices</h2>
-    <%= f.collection_select(:ingredient_ids, spices, :id, :name, {:prompt => "...mulitselect..."}, {:multiple => true, :style => "width:300px", :style => "height:300px"}) %>
-  <%= image_tag ("/assets/meats.png"), class: "img-responsive", size: "80x80" %>
+    <%= f.collection_select(:ingredient_ids, spices, :id, :name, {:prompt => "...mulitselect..."}, {:multiple => true, :style => "width:300px", :style => "height:300px"}) %><br>
+     <%= image_tag ("/assets/meats.png"), class: "img-responsive", size: "80x80" %>
     <h2>Meat</h2>
-  <%= f.collection_select(:ingredient_ids, meats, :id, :name, {:prompt => "...mulitselect..."}, {:multiple => true, :style => "width:300px", :style => "height:300px"}) %>
+  <%= f.collection_select(:ingredient_ids, meats, :id, :name, {:prompt => "...mulitselect..."}, {:multiple => true, :style => "width:300px", :style => "height:300px"}) %><br>
   <%= image_tag ("/assets/baking.png"), class: "img-responsive", size: "80x80" %>
     <h2>Baking</h2>
-  <%= f.collection_select(:ingredient_ids, baking, :id, :name, {:prompt => "...mulitselect..."}, {:multiple => true, :style => "width:300px", :style => "height:300px"}) %>
+  <%= f.collection_select(:ingredient_ids, baking, :id, :name, {:prompt => "...mulitselect..."}, {:multiple => true, :style => "width:300px", :style => "height:300px"}) %><br>
   <%= image_tag ("/assets/dairy.png"), class: "img-responsive", size: "80x80" %>
     <h2>Dairy</h2>
-  <%= f.collection_select(:ingredient_ids, dairy, :id, :name, {:prompt => "...mulitselect..."}, {:multiple => true, :style => "width:300px", :style => "height:300px"}) %>
-  <%= image_tag ("/assets/leftovers.png"), class: "img-responsive", size: "80x80" %>
+  <%= f.collection_select(:ingredient_ids, dairy, :id, :name, {:prompt => "...mulitselect..."}, {:multiple => true, :style => "width:300px", :style => "height:300px"}) %><br>
+    <%= image_tag ("/assets/leftovers.png"), class: "img-responsive", size: "80x80" %>
     <h2>Leftovers</h2>
-  <%= f.collection_select(:ingredient_ids, leftovers, :id, :name, {:prompt => "...mulitselect..."}, {:multiple => true, :style => "width:300px", :style => "height:300px"}) %>
-  
-<%= f.submit %>
+  <%= f.collection_select(:ingredient_ids, leftovers, :id, :name, {:prompt => "...mulitselect..."}, {:multiple => true, :style => "width:300px", :style => "height:300px"}) %><br>
+
+<%= f.submit "Create"%>
   
 
 <% end %>

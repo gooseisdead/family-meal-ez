@@ -1,3 +1,4 @@
+
 <h1>Ingredient Details</h1>
 <p><%= button_to "Update Ingredient Iventory", ingredient_path(@ingredient) %></p>
 
@@ -13,9 +14,15 @@
 <% elsif @ingredient.category == "vegetables"%>
 <%= image_tag ("/assets/vegetables.png"), class: "img-responsive" %>
 <% elsif @ingredient.category == "canned goods"%>
-<%= image_tag ("/assets/canned_goods.png"), class: "img-responsive" %>
+<%= image_tag ("/assets/canned.png"), class: "img-responsive" %>
 <% elsif @ingredient.category == "spices"%>
 <%= image_tag ("/assets/spices.png"), class: "img-responsive" %>
+<% elsif @ingredient.category == "dairy"%>
+<%= image_tag ("/assets/dairy.png"), class: "img-responsive" %>
+<% elsif @ingredient.category == "meats"%>
+<%= image_tag ("/assets/meats.png"), class: "img-responsive" %>
+<% elsif @ingredient.category == "leftovers"%>
+<%= image_tag ("/assets/leftovers.png"), class: "img-responsive" %>
 <% else @ingredient.category == nil %>
 <%= image_tag ("/assets/qmark.png"), class: "img-responsive" %>
 <% end %>

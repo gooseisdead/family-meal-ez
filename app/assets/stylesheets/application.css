@@ -13,108 +13,176 @@
  *= require_tree .
  *= require_self
  */
- 
- * {
-     /* border: 1px solid black; */
-    font-family: Arial, Helvetica, sans-serif;
- }
- .nav {
-    background-color: rgb(236, 233, 233);
-    height: 45px;
+
+
+
+
+  
+.banner {
+    
     width: 100%;
     margin: 0px auto;
   }
-  
-   .nav li {
-     /* border: 2px solid rgb(71, 65, 124);
-     border-radius: 25px; */
-     display: inline-block;
-     line-height: 8px;
-     padding: 5px 5px;
-     margin: auto;
-  
-   }
-  
-   .nav li:hover {
-     background-color: rgb(219, 213, 213);
-     transition: 1s;
-   }
-  
-   .nav li a {
+
+  * {
+    /* border: 1px solid black; */
+   font-family: Arial, Helvetica, sans-serif;
+}
+.nav {
+   background-color: rgb(236, 233, 233);
+   border-radius: 25px;
+   width: 92%;
+   margin: 0px auto;
+}
+
+.nav li {
+    display: inline-block;
+    line-height: 8px;
+    padding: 18px 5px;
+    margin: 0px auto;
+}
+
+.nav li:hover {
+    background-color: rgb(211, 201, 201);
+    border-radius: 25px;
+    padding: 20px;
+    transition: 0.5s;
+}
+
+.nav li a {
+   text-decoration: none;
+   color: #43609e;
+   font-weight: 800;
+}
+   
+.nav2 {
+    float: right;
+    list-style-type: none;
+    width: 20%;
+    padding: 25px;
+}
+
+.nav2 li {
+   list-style-type: none;
+   background-color: rgb(236, 233, 233);
+   border-radius: 25px;
+   display: center;
+   line-height: 20px;
+   padding: 10px;
+}
+
+.nav2 li:hover {
+   list-style-type: none;
+   background-color: rgb(219, 213, 213);
+   transition: 1s;
+}
+
+.nav2 li a {
+    list-style-type: none;
     text-decoration: none;
     color: #43609e;
     font-weight: 800;
+}
+
+.log_name {
+   color: #43609e;
+}
+
+input[type=text-area], select {
+    color: #43609e;
+    size: 80px;
+    width: 13%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 1px solid rgb(37, 33, 33);
+    border-radius: 25px;
+    box-sizing: border-box;
+  }
+
+input[type=password], select {
+    color: #43609e;
+    size: 80px;
+    width: 13%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 1px solid rgb(37, 33, 33);
+    border-radius: 25px;
+    box-sizing: border-box;
+  }
+  input[type=number], select {
+    color: #43609e;
+    size: 80px;
+    width: 13%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 1px solid rgb(37, 33, 33);
+    border-radius: 25px;
+    box-sizing: border-box;
+  }
+
+input[type=text], select {
+    color: #43609e;
+    size: 80px;
+    width: 13%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 1px solid rgb(37, 33, 33);
+    border-radius: 25px;
+    box-sizing: border-box;
   }
   
-  .user {
-    border: 1px solid rgb(71, 65, 124);
-    float: right;
-    margin-right: 5%;
-    background-color:  rgb(236, 233, 233);
-    background-position: center;
-    padding: 10px;
-}
-
-.user ul {
-    border: 1px solid rgb(71, 65, 124);
+  input[type=submit] {
+    width: 60%;
+    background-color: #56529b;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: black;
     border-radius: 25px;
-    display: center;
-    line-height: 20px;
-    padding: 5px 5px;
-    margin: auto;
- 
+    cursor: pointer;
   }
- 
-  .user ul:hover {
-    background-color: rgb(219, 213, 213);
-    transition: 1s;
+  
+  input[type=submit]:hover {
+    background-color: #5e70d8;
   }
- 
-  .user ul a {
-   text-decoration: none;
-   color: #43609e;
-   font-weight: 800;
- }
-
- .log_name {
-    color: red;
- }
-
-.login {
-    float: center;
-    margin-right: 5%;
-    background-color:  rgb(236, 233, 233);
-    background-position: center;
-    padding: 5px;
-}
-
-.login ul {
-    border: 1px solid rgb(71, 65, 124);
-    border-radius: 25px;
-    display: inline-block;
-    line-height: 20px;
-    padding: 5px 25px;
-    margin: auto;
- 
-  }
- 
-  .login ul:hover {
-    background-color: rgb(219, 213, 213);
-    transition: 1s;
-  }
- 
-  .login li a {
-   text-decoration: none;
-   color: #43609e;
-   font-weight: 800;
- }
-
-
- body {
+  
+  body {
     background-color: lightblue;
     text-align: center;
-    margin-top: 100px;
-    margin-bottom: 100px;
-    margin-right: 0px;
-    margin-left: 0px;
+ }
+ /* * {border: 1px solid rgb(71, 65, 124); } */
+ 
+ 
+ * { 
+    font-family: Arial, Helvetica, sans-serif;
+ }
+
+ #emp_content {
+     display: flex;
+     flex-direction: row;
+     flex-wrap: wrap;
+     padding: 25px
+ }
+
+ #emp_staff {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 85px
+}
+
+#emp_pro {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 85px
+}
+
+
+
+.ings {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 85px
 }
