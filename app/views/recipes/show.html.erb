@@ -83,6 +83,8 @@
 <h3>Chef's Notes </h3>
 <p><%= @recipe.description %></p> 
 <h2>Ingredients</h2>
+<div class = "rec_deets">
+<div>
 <% @recipe.recipe_ingredients.each do |recipe_ingredient| %>
 
 <% if recipe_ingredient.ingredient.category == "fruits" %>
@@ -94,7 +96,7 @@
 <%= image_tag ("/assets/vegetables.png"), class: "img-responsive", size: "90x90" %>
 <p><%= link_to recipe_ingredient.ingredient.name, ingredient_path(recipe_ingredient.ingredient.id) %></p>
 <p>Amount Available: <%= recipe_ingredient.ingredient.quantity %></p>
-
+   
 <% elsif recipe_ingredient.ingredient.quality == "use today" %>
 <%= image_tag ("/assets/urgent.png"), class: "img-responsive", size: "90x90" %>
 <p><%= link_to recipe_ingredient.ingredient.name, ingredient_path(recipe_ingredient.ingredient.id) %></p>
@@ -109,7 +111,7 @@
 <%= image_tag ("/assets/day_old.png"), class: "img-responsive", size: "90x90" %>
 <p><%= link_to recipe_ingredient.ingredient.name, ingredient_path(recipe_ingredient.ingredient.id) %></p>
 <p>Amount Available: <%= recipe_ingredient.ingredient.quantity %></p>
-
+>
 
 <% elsif recipe_ingredient.ingredient.category == "spices" %>
 <%= image_tag ("/assets/spices.png"), class: "img-responsive", size: "90x90" %>
@@ -142,9 +144,11 @@
 <%= image_tag ("/assets/qmark.png"), class: "img-responsive", size: "90x90" %>
 <p><%= link_to recipe_ingredient.ingredient.name, ingredient_path(recipe_ingredient.ingredient.id) %></p>
 <p>Amount Available: <%= recipe_ingredient.ingredient.quantity %></p>
-    
     <% end %>
 <% end %>
+</div>
+</div>
+<br>
 
     
        

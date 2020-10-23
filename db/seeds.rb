@@ -11,7 +11,7 @@ RecipeIngredient.destroy_all
 Employee.destroy_all
 FamilyMeal.destroy_all
 
-ingredient_quality = ["fresh", "day-old", "expiring", "use today"]
+ingredient_quality = ["fresh", "day-old", "expiring", "use today", "out of stock"]
 jobs = ["Cook", "Busser", "Runner", "Server", "Bartender"]
 shifts = ["Breakfast", "Lunch", "Dinner"]
 

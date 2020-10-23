@@ -1,5 +1,9 @@
+<div class = "all_rec">
+<div>
 <%= image_tag ("/assets/recipes.png"), class: "img-responsive", size: "200x200" %>
-<h1><u>Recipes List</u></h1>
+<h1>Recipes List</h1>
 <% @recipes.each do |recipe| %>
-<h2><%= link_to recipe.name, recipe_path(recipe) %></h2>
+<p><%= link_to recipe.name, recipe_path(recipe) %></p>
 <% end %>
+</div>
+</div>

@@ -23,6 +23,8 @@
 <%= image_tag ("/assets/meats.png"), class: "img-responsive" %>
 <% elsif @ingredient.category == "leftovers"%>
 <%= image_tag ("/assets/leftovers.png"), class: "img-responsive" %>
+<% elsif @ingredient.category == "out of stock"%>
+<%= image_tag ("/assets/stock.png"), class: "img-responsive" %>
 <% else @ingredient.category == nil %>
 <%= image_tag ("/assets/qmark.png"), class: "img-responsive" %>
 <% end %>
