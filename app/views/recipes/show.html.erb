@@ -85,12 +85,12 @@
 <h2>Ingredients</h2>
 <% @recipe.recipe_ingredients.each do |recipe_ingredient| %>
 
-<% if recipe_ingredient.ingredient.category == "fruit" %>
+<% if recipe_ingredient.ingredient.category == "fruits" %>
 <%= image_tag ("/assets/fruits.png"), class: "img-responsive", size: "90x90" %>
 <p><%= link_to recipe_ingredient.ingredient.name, ingredient_path(recipe_ingredient.ingredient.id) %></p>
 <p>Amount Available: <%= recipe_ingredient.ingredient.quantity %></p>
   
-<% elsif recipe_ingredient.ingredient.category == "vegetable" %>
+<% elsif recipe_ingredient.ingredient.category == "vegetables" %>
 <%= image_tag ("/assets/vegetables.png"), class: "img-responsive", size: "90x90" %>
 <p><%= link_to recipe_ingredient.ingredient.name, ingredient_path(recipe_ingredient.ingredient.id) %></p>
 <p>Amount Available: <%= recipe_ingredient.ingredient.quantity %></p>

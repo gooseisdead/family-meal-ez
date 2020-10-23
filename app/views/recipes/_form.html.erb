@@ -82,8 +82,6 @@
 <% end %>
 
 <br>
-<div class = "parent">
-<div class = "div1">
 <h1>New Recipe</h1>
 <%= form_with model: @recipe, remote: false do |f| %>
   <%= f.label :name %>
@@ -91,13 +89,13 @@
 <br>
   <%= f.label :description, "Notes" %>
   <%= f.text_area :description, size: "80x15" %>
-<br></div>
+<br>
 
   
 
 
   
-<div class = "div2">
+
   <%= image_tag ("/assets/urgent.png"), class: "img-responsive", size: "80x80" %>
     <h2>Use Today!</h2>
     <%= f.collection_select(:ingredient_ids, use_todays, :id, :name, {:prompt => "...mulitselect..."}, {:multiple => true, :style => "width:300px", :style => "height:300px"}) %><br>
@@ -116,12 +114,12 @@
     <h2>Fruits</h2>
   <%= f.collection_select(:ingredient_ids, fruits, :id, :name, {:prompt => "...mulitselect..."}, {:multiple => true, :style => "width:300px", :style => "height:300px"}) %><br>
   <%= image_tag ("/assets/vegetables.png"), class: "img-responsive", size: "80x80" %>
-  </div>
+  
 
     <h2>Vegetables</h2>
   <%= f.collection_select(:ingredient_ids, vegetables, :id, :name, {:prompt => "...mulitselect..."}, {:multiple => true, :style => "width:300px", :style => "height:300px"}) %><br>
   <%= image_tag ("/assets/spices.png"), class: "img-responsive", size: "80x80" %>
-  </div>
+  
     <h2>Spices</h2>
     <%= f.collection_select(:ingredient_ids, spices, :id, :name, {:prompt => "...mulitselect..."}, {:multiple => true, :style => "width:300px", :style => "height:300px"}) %><br>
      <%= image_tag ("/assets/meats.png"), class: "img-responsive", size: "80x80" %>
