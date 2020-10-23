@@ -16,9 +16,23 @@ jobs = ["Cook", "Busser", "Runner", "Server", "Bartender"]
 shifts = ["Breakfast", "Lunch", "Dinner"]
 
 
-15.times do
-    Recipe.create(name: Faker::Food.dish, description: Faker::Food.description)
-end
+# 15.times do
+#     Recipe.create(name: Faker::Food.dish, description: Faker::Food.description)
+# end
+
+r1 = Recipe.create(name: "Egg McMuffin", description: )
+r2 = Recipe.create(name: "Sourdough Waffles", description: )
+r3 = Recipe.create(name: "Shakshuka", description: )
+r4 = Recipe.create(name: "British-Style Beans on Toast", description: )
+r5 = Recipe.create(name: "Smashed Cheeseburgers", description: )
+r6 = Recipe.create(name: "Patty Melt", description: )
+r7 = Recipe.create(name: "Muffaletta Sandwich", description: )
+r8 = Recipe.create(name: "Falafel", description: )
+r9 = Recipe.create(name: "Fried Chicken", description: )
+r10 = Recipe.create(name: "Fried Rice", description: )
+r11 = Recipe.create(name: "Beef and Barley Soup", description: )
+r12 = Recipe.create(name: "Falafel", description: )
+    
 
 10.times do 
     Ingredient.create(name: Faker::Food.fruits, quantity: rand(12..34), quality: ingredient_quality.sample, category: "fruits")

@@ -11,7 +11,7 @@
 
 <% @family_meals.each do |family_meal| %>
     <% if family_meal.shift == "Breakfast" && family_meal.employee.job_title == 'Cook'%>
-        <%= family_meal.recipe.name %></b>.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Cook Responsible: <%= family_meal.employee.name %>
+        <%= link_to family_meal.recipe.name, recipe_path(family_meal.recipe_id) %></b>.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Cook Responsible: <%= family_meal.employee.name %>
         <% end %>
     <% end %>
 
@@ -27,6 +27,6 @@
 
 <% @family_meals.each do |family_meal| %>
     <% if family_meal.shift == "Dinner" && family_meal.employee.job_title == 'Cook'%>
-        <%= family_meal.recipe.name %></b>.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Cook Responsible: <%= family_meal.employee.name %>
+        <%= link_to family_meal.recipe.name, recipe_path(family_meal.recipe_id) %></b>.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Cook Responsible: <%= family_meal.employee.name %>
         <% end %>
     <% end %>

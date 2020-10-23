@@ -1,0 +1,9 @@
+<h1><%= @recipe.name %></h1>
+
+<h2>Edit Notes</h2>
+<%= form_with model: @recipe, remote: false do |f| %>
+  <%= f.label :description, "Notes" %>
+  <%= f.text_area :description, size: "80x15" %>
+<br>
+  <%= f.submit "Confirm Edit"%>
+<% end %>
