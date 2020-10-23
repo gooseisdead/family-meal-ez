@@ -1,5 +1,19 @@
+
+
+
 <%= image_tag ("/assets/ingredients.png"), class: "img-responsive", size: "170x170"%>
 <h1>Ingredient Inventory</h2>
+
+<% if flash[:success] %>
+ <h2 style = "color:green;"><%= flash[:success] %></h2> 
+<% end %>
+
+<% if flash[:errors] %>
+    <% flash[:errors].each do |error|  %>
+       <h2 style = "color:red;"><%= error %></h2>
+    <% end %>
+<% end %>
+
 <h3><%= link_to "Add New Ingredient", new_ingredient_path %></h3> 
  <div class = "ings">
  <div> 
@@ -27,7 +41,7 @@
     <%= image_tag ("/assets/stock.png"), class: "img-responsive", size: "170x170"%>
 <p>Out of Stock</p>
 <% @ingredients.each do |ingredient| %>
-<% if ingredient.quality == "out of stock" %>
+<% if ingredient.quality == "out of stock" && ingredient.quantity = 0 %>
 <ul><%= link_to ingredient.name, ingredient_path(ingredient) %> ........... Quantity .. <%= ingredient.quantity %></ul>
     <% end %>
 <% end %>

@@ -1,6 +1,6 @@
 class IngredientsController < ApplicationController
     before_action :find_ingredients, only: [:edit, :update, :show, :destroy]
-    before_action :chef_check
+  
 
     def index
         @ingredients = Ingredient.all
@@ -30,10 +30,10 @@ class IngredientsController < ApplicationController
     def update
         if @ingredient.update(ingredient_params)
           flash[:success] = "Ingredient was successfully updated"
-          redirect_to ingredient_path(@ingredient)
+          redirect_to ingredients_path
         else
           flash[:errors] = @ingredient.errors.full_messages
-          redirect_to edit_ingredient_path
+          redirect_to ingredients_path
         end
     end
 

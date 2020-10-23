@@ -1,8 +1,13 @@
+<div class = "icon">
+<div>
+<%= image_tag ("/assets/staff.png"), class: "img-responsive" %>
+</div>
+</div>
 <h1>Employee Profile</h1>
 <h2><%= @employee.name %></h2>
 <div id="emp_pro">
     <div class="pros">
-<h3>Job Title: <%= @employee.job_title %></h3>
+<h3>Job Title <br><br> <%= @employee.job_title %></h3>
 <% if @employee.job_title == "bartender" %>
 <%= image_tag ("/assets/bartender.png"), class: "img-responsive" %>
 <% elsif @employee.job_title == "busser"%>
@@ -16,7 +21,7 @@
 <% end %>
 </div>
     <div class="pros">
-<h3>Shift: <%= @employee.shift %></h3>
+<h3>Shift <br><br> <%= @employee.shift %></h3>
 <% if @employee.shift == "breakfast" %>
 <%= image_tag ("/assets/breakfast.png"), class: "img-responsive" %>
 <% elsif @employee.shift == "lunch"%>
@@ -25,3 +30,4 @@
 <%= image_tag ("/assets/dinner.png"), class: "img-responsive" %>
 <% end %></div>
 </div>
+<%= button_to "Delete", employee_path(@employee), method: :delete %>

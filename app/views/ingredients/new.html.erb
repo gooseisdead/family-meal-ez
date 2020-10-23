@@ -5,7 +5,7 @@
 <%= f.text_field :name %>
 <br>
 <%= f.label :category %>
-<%= f.select :category, options_for_select([["Select One", ""], "fruit", "vegetable", "canned goods"]) %>
+<%= f.select :category, options_for_select([["Select One", ""], "fruit", "vegetable", "canned goods", "dairy", "meats", "baking", "leftovers", "spices"]) %>
 <%= render 'form' %>
 
 <% end %>

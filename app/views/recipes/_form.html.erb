@@ -99,7 +99,9 @@
   <%= image_tag ("/assets/urgent.png"), class: "img-responsive", size: "80x80" %>
     <h2>Use Today!</h2>
     <%= f.collection_select(:ingredient_ids, use_todays, :id, :name, {:prompt => "...mulitselect..."}, {:multiple => true, :style => "width:300px", :style => "height:300px"}) %><br>
-  
+  <%= image_tag ("/assets/leftovers.png"), class: "img-responsive", size: "80x80" %>
+    <h2>Leftovers</h2>
+  <%= f.collection_select(:ingredient_ids, leftovers, :id, :name, {:prompt => "...mulitselect..."}, {:multiple => true, :style => "width:300px", :style => "height:300px"}) %><br>
 
 
   <%= image_tag ("/assets/day_old.png"), class: "img-responsive", size: "80x80" %>
@@ -131,9 +133,7 @@
   <%= image_tag ("/assets/dairy.png"), class: "img-responsive", size: "80x80" %>
     <h2>Dairy</h2>
   <%= f.collection_select(:ingredient_ids, dairy, :id, :name, {:prompt => "...mulitselect..."}, {:multiple => true, :style => "width:300px", :style => "height:300px"}) %><br>
-    <%= image_tag ("/assets/leftovers.png"), class: "img-responsive", size: "80x80" %>
-    <h2>Leftovers</h2>
-  <%= f.collection_select(:ingredient_ids, leftovers, :id, :name, {:prompt => "...mulitselect..."}, {:multiple => true, :style => "width:300px", :style => "height:300px"}) %><br>
+    
 
 <%= f.submit "Create"%>
   

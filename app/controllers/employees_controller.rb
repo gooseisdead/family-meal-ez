@@ -1,6 +1,6 @@
 class EmployeesController < ApplicationController
     before_action :find_employees, only: [:edit, :update, :show, :destroy]
-    # before_action :chef_check
+    before_action :chef_check, only: [:show, :destory]
     skip_before_action :authorized?, only: [:new, :create]
 
 
@@ -39,6 +39,11 @@ class EmployeesController < ApplicationController
           flash[:errors] = @employee.errors.full_messages
           redirect_to edit_employee_path
         end
+    end
+
+    def destroy 
+      @employee.destroy
+      redirect_to employees_path
     end
     
 private

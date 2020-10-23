@@ -1,7 +1,11 @@
 <% if flash[:login_error] %>
     <%= flash[:login_error] %>
 <% end %>
-
+<div class = "icon">
+<div>
+<%= image_tag ("/assets/staff.png"), class: "img-responsive" %>
+</div>
+</div>
     <h2>Employee Login</h2>
 
 <%= form_for :session do |f| %>
