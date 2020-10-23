@@ -1,8 +1,7 @@
 <% if flash[:login_error] %>
     <%= flash[:login_error] %>
 <% end %>
-<div class = "emp_login ">
-<div>
+
     <h2>Employee Login</h2>
 
 <%= form_for :session do |f| %>
@@ -14,6 +13,4 @@
     <br>
     <%= f.submit %>
 <% end %>
-    </h2>
-</div>
-</div>
+   

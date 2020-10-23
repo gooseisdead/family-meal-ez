@@ -6,9 +6,6 @@
      <% end %> 
  <% end %>  
 
-
-<div class = "new_emp_form">
-<div>
 <h2><%= form_for @employee do |f| %>
     
     <%=f.label :name %>
@@ -24,7 +21,4 @@
     <%=f.select :job_title, options_for_select([["Select One", ""], "Cook", "Busser", "Runner", "Server", "Bartender", "Chef"]) %>
     <br>
     <%=f.submit %></h2>
-        </div>
-    </div>
-
 <% end %>

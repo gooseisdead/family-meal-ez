@@ -4,5 +4,5 @@ class Recipe < ApplicationRecord
     has_many :recipe_ingredients
     has_many :ingredients, through: :recipe_ingredients
     
-    validates :name, :description, :shift, presence: true
+    validates :name, :description, presence: true
 end

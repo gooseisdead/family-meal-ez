@@ -13,24 +13,24 @@
  *= require_tree .
  *= require_self
  */
-
+ 
  * {
      /* border: 1px solid black; */
     font-family: Arial, Helvetica, sans-serif;
  }
  .nav {
     background-color: rgb(236, 233, 233);
-    height: 40px;
+    height: 45px;
     width: 100%;
     margin: 0px auto;
   }
   
    .nav li {
-     border: 2px solid rgb(71, 65, 124);
-     border-radius: 25px;
+     /* border: 2px solid rgb(71, 65, 124);
+     border-radius: 25px; */
      display: inline-block;
-     line-height: 35px;
-     padding: 0px 25px;
+     line-height: 8px;
+     padding: 5px 5px;
      margin: auto;
   
    }
@@ -76,8 +76,12 @@
    font-weight: 800;
  }
 
+ .log_name {
+    color: red;
+ }
+
 .login {
-    float: right;
+    float: center;
     margin-right: 5%;
     background-color:  rgb(236, 233, 233);
     background-position: center;
@@ -87,7 +91,7 @@
 .login ul {
     border: 1px solid rgb(71, 65, 124);
     border-radius: 25px;
-    display: center;
+    display: inline-block;
     line-height: 20px;
     padding: 5px 25px;
     margin: auto;
@@ -105,6 +109,7 @@
    font-weight: 800;
  }
 
+
  body {
     background-color: lightblue;
     text-align: center;
@@ -113,121 +118,3 @@
     margin-right: 0px;
     margin-left: 0px;
 }
-
-#header {
-    background-color: lightblue;
-    text-align: center;
-    text-underline-position: center;
-    padding: 4px 100px;
-
-}
-
-
-/* form {
-    display: inline-block;
-    margin-top: 100px;
-    margin-bottom: 100px;
-    margin-right: 80px;
-    margin-left: 80px;
-} */
-
-#box {
-    display: flex;
-    width: 100px;
-    margin: 0 -5px;
-}
-.uses {
-    justify-content: center;
-    display: flex;
-}
-
-.uses_2 {
-    justify-content: center;
-    display: flex;
-}
-
-.emp_shifts {
-    display: inline-flex;
-    flex-wrap: wrap;
-}
-  
-.emp_shifts > div {
-    margin: 25px;
-}
-
-.staff {
-    display: inline-flex;
-    flex-wrap: wrap;
-}
-  
-.staff > div {
-    margin: 25px;
-}
-
-.emp_profiles {
-    display: inline-flex;
-    flex-wrap: wrap;
-}
-  
-.emp_profiles > div {
-    margin: 25px;
-}
-
-.new_emp_form {
-    display: inline-flex;
-    flex-wrap: wrap;
-    background-color:  #5bbce9 );
-    padding: 40px;
-
-}
-
-.emp_login {
-    display: inline-flex;
-    flex-wrap: wrap;
-    background-color: #5bbce9);
-    padding: 40px;
-}
-
-.new_fam_meal {
-    display: inline-flex;
-    flex-wrap: wrap;
-    background-color: #5bbce9);
-    padding: 40px;
-}
-.new_rec_form {
-    display: inline-flex;
-    flex-wrap: wrap;
-    background-color:  #5bbce9);
-    padding: 10px;
-}
-
-.ing_list {
-    display: inline-flex;
-    flex-wrap: wrap;
-}
-  
-.ing_list > div {
-    margin: 25px;
-}
-.ing_details {
-    display: inline-flex;
-    flex-wrap: wrap;
-}
-  
-.ing_details > div {
-    margin: 25px;
-}
-
-.rec_ing_details {
-    display: inline-flex;
-    flex-wrap: wrap;
-}
-  
-.rec_ing_details > div {
-    margin: 25px;
-}
-
-
-
-
-  

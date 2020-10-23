@@ -6,14 +6,11 @@
 
 <% cooks = [] %>
 <% Employee.all.each do |employee| %>
-    <% if employee.job_title == "cook" %>
+    <% if employee.job_title == "Cook" %>
         <% cooks << employee %>
     <% end %>
 <% end %>
 
-<div class = "new_fam_meal">
-    <div>
-        <h2>
 <%= form_for @family_meal do |f| %>
     
     <%=f.label :recipe_id %>
@@ -23,11 +20,9 @@
     <%=f.collection_select :employee_id, cooks, :id, :name %>
 <br>
     <%= f.label :shift %>
-    <%= f.select :shift, options_for_select([["Select One", ""], "breakfast", "lunch", "dinner"]) %>
+    <%= f.select :shift, options_for_select([["Select One", ""], "Breakfast", "Lunch", "Dinner"]) %>
 <br>
     <%= f.submit "Submit"%>
 
 <% end %>
-        </h2>
-    </div>
-</div>
+    

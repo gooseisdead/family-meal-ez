@@ -1,65 +1,65 @@
-<h1><u>Ingredient Inventory</u></h2>
+<h1>Ingredient Inventory</h2>
 
-<div class = "ing_list">
-    <div>
+
+    
     <%= image_tag ("/assets/fresh.png"), class: "img-responsive" %>
-<p><u><b>Fresh Ingredients</b></u></p>
+<p>Fresh Ingredients</p>
 <% @ingredients.each do |ingredient| %>
 <% if ingredient.quality == "fresh" %>
-<p><%= link_to ingredient.name, ingredient_path(ingredient) %> ........... Quantity .. <i><b><%= ingredient.quantity %></i></b></p>
+<p><%= link_to ingredient.name, ingredient_path(ingredient) %> ........... Quantity .. <%= ingredient.quantity %></p>
     <% end %>
 <% end %>
-    </div>
-<div>
+    
+
 <%= image_tag ("/assets/day_old.png"), class: "img-responsive" %>
-<p><u><b>Day-Old Ingredients</b></u></p>
+<p>Day-Old Ingredients</p>
 <% @ingredients.each do |ingredient| %>
 <% if ingredient.quality == "day-old" %>
-<p><%= link_to ingredient.name, ingredient_path(ingredient) %> ........... Quantity .. <i><b><%= ingredient.quantity %></i></b></p>
+<p><%= link_to ingredient.name, ingredient_path(ingredient) %> ........... Quantity .. <%= ingredient.quantity %></p>
     <% end %>
 <% end %>
-    </div>
-<div>
+    
+
 <%= image_tag ("/assets/expiring.png"), class: "img-responsive" %>
-<p><u><b>Expiriing Ingredients</b></u></p>
+<p>Expiriing Ingredients</p>
 <% @ingredients.each do |ingredient| %>
 <% if ingredient.quality == "expiring" %>
-<p><%= link_to ingredient.name, ingredient_path(ingredient) %> ........... Quantity .. <i><b><%= ingredient.quantity %></i></b></p>
+<p><%= link_to ingredient.name, ingredient_path(ingredient) %> ........... Quantity .. <%= ingredient.quantity %></p>
     <% end %>
 <% end %>
-    </div>
-<div>
+    
+
 <%= image_tag ("/assets/urgent.png"), class: "img-responsive" %>
-<p><u><b>Use-Today Ingredients</b></u></p>
+<p>Use-Today Ingredients</p>
 <% @ingredients.each do |ingredient| %>
 <% if ingredient.quality == "use today" %>
-<p><%= link_to ingredient.name, ingredient_path(ingredient) %> ........... Quantity .. <i><b><%= ingredient.quantity %></i></b></p>
+<p><%= link_to ingredient.name, ingredient_path(ingredient) %> ........... Quantity .. <%= ingredient.quantity %></p>
     <% end %>
 <% end %>
-    </div>
-<div>
+    
+
 <%= image_tag ("/assets/fruits.png"), class: "img-responsive" %>
-<p><u><b>Fruits</b></u></p>
+<p>Fruits</p>
 <% @ingredients.each do |ingredient| %>
 <% if ingredient.category == "fruits" %>
-<p><%= link_to ingredient.name, ingredient_path(ingredient) %> ........... Quantity .. <i><b><%= ingredient.quantity %></i></b></p>
+<p><%= link_to ingredient.name, ingredient_path(ingredient) %> ........... Quantity .. <%= ingredient.quantity %></p>
     <% end %>
 <% end %>
-    </div>
-<div>
+    
+
 <%= image_tag ("/assets/vegetables.png"), class: "img-responsive" %>
-<p><u><b>Vegetables</b></u></p>
+<p>Vegetables</p>
 <% @ingredients.each do |ingredient| %>
 <% if ingredient.category == "vegetables" %>
-<p><%= link_to ingredient.name, ingredient_path(ingredient) %> ........... Quantity .. <i><b><%= ingredient.quantity %></i></b></p>
+<p><%= link_to ingredient.name, ingredient_path(ingredient) %> ........... Quantity .. <%= ingredient.quantity %></p>
     <% end %>
 <% end %>
-    </div>
-</div>
+    
+
 
 
 <% @ingredients.each do |ingredient| %>
-<b><p><%= link_to ingredient.name, ingredient_path(ingredient) %></p></b>
-<ol>Amount: <%= ingredient.quantity %> - Quality: ........... <i><b><%= ingredient.quality %> </i></b></ol>
+<p><%= link_to ingredient.name, ingredient_path(ingredient) %></p>
+Amount: <%= ingredient.quantity %> - Quality: ........... <%= ingredient.quality %>
 <% end %>
 <br>

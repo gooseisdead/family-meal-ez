@@ -12,70 +12,63 @@ Employee.destroy_all
 FamilyMeal.destroy_all
 
 ingredient_quality = ["fresh", "day-old", "expiring", "use today"]
-jobs = ["cook", "busser", "runner", "server", "bartender"]
-shifts = ["breakfast", "lunch", "dinner"]
-days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
+jobs = ["Cook", "Busser", "Runner", "Server", "Bartender"]
+shifts = ["Breakfast", "Lunch", "Dinner"]
 
 
 15.times do
-    Recipe.create(name: Faker::Food.dish, description: Faker::Food.description, day: days.sample, shift: shifts.sample)
+    Recipe.create(name: Faker::Food.dish, description: Faker::Food.description)
 end
 
-1.times do
-    Employee.create(name: Faker::Name.name, job_title: "chef", shift: shifts.sample, day: days.sample)
+10.times do 
+    Ingredient.create(name: Faker::Food.fruits, quantity: rand(12..34), quality: ingredient_quality.sample, category: "fruits")
 end
 
-    # Employee.create(name: "Greg", job_title: "Chef", shift: shifts.sample, day: days.sample)
+Ingredient.create(name: "Milk" , quantity: rand(12..34), quality: ingredient_quality.sample, category: "dairy")
+Ingredient.create(name: "Eggs" , quantity: rand(12..34), quality: ingredient_quality.sample, category: "dairy")
+Ingredient.create(name: "Challah Bread" , quantity: rand(12..34), quality: ingredient_quality.sample, category: "dairy")
+Ingredient.create(name: "Heavy Cream" , quantity: rand(12..34), quality: ingredient_quality.sample, category: "dairy")
+Ingredient.create(name: "Cheddar Cheese" , quantity: rand(12..34), quality: ingredient_quality.sample, category: "dairy")
+Ingredient.create(name: "Pancake Mix" , quantity: rand(12..34), quality: ingredient_quality.sample, category: "dairy")
+Ingredient.create(name: "Pastry Dough" , quantity: rand(12..34), quality: ingredient_quality.sample, category: "dairy")
+Ingredient.create(name: "Taco Shells" , quantity: rand(12..34), quality: ingredient_quality.sample, category: "dairy")
 
-20.times do 
-    Ingredient.create(name: Faker::Food.fruits, quantity: rand(1..15), quality: ingredient_quality.sample, category: "fruits")
+Ingredient.create(name: "Ground Beef" , quantity: rand(12..34), quality: ingredient_quality.sample, category: "meats")
+Ingredient.create(name: "Halibut" , quantity: rand(12..34), quality: ingredient_quality.sample, category: "meats")
+Ingredient.create(name: "Ground Pork" , quantity: rand(12..34), quality: ingredient_quality.sample, category: "meats")
+Ingredient.create(name: "Tripe" , quantity: rand(12..34), quality: ingredient_quality.sample, category: "meats")
+Ingredient.create(name: "Chicken Cutlets" , quantity: rand(12..34), quality: ingredient_quality.sample, category: "meats")
+Ingredient.create(name: "Pork Chops" , quantity: rand(12..34), quality: ingredient_quality.sample, category: "meats")
+Ingredient.create(name: "Hot Dogs" , quantity: rand(12..34), quality: ingredient_quality.sample, category: "meats")
+Ingredient.create(name: "Salisbury Steak" , quantity: rand(12..34), quality: ingredient_quality.sample, category: "meats")
+
+Ingredient.create(name: "Steamed Vegetables" , quantity: rand(12..34), quality: ingredient_quality.sample, category: "leftovers")
+Ingredient.create(name: "Mashed Potatoes" , quantity: rand(12..34), quality: ingredient_quality.sample, category: "leftovers")
+Ingredient.create(name: "Vegetable Dumplings" , quantity: rand(12..34), quality: ingredient_quality.sample, category: "leftovers")
+
+
+Ingredient.create(name: "Tomato Paste" , quantity: rand(12..34), quality: ingredient_quality.sample, category: "canned goods")
+Ingredient.create(name: "Tuna" , quantity: rand(12..34), quality: ingredient_quality.sample, category: "canned goods")
+Ingredient.create(name: "Kidney Beans" , quantity: rand(12..34), quality: ingredient_quality.sample, category: "canned goods")
+Ingredient.create(name: "Cream of Mushroom" , quantity: rand(12..34), quality: ingredient_quality.sample, category: "canned goods")
+Ingredient.create(name: "Creamed Corn" , quantity: rand(12..34), quality: ingredient_quality.sample, category: "canned goods")
+Ingredient.create(name: "Refried Beans" , quantity: rand(12..34), quality: ingredient_quality.sample, category: "canned goods")
+Ingredient.create(name: "Peaches" , quantity: rand(12..34), quality: ingredient_quality.sample, category: "canned goods")
+Ingredient.create(name: "White Gravy" , quantity: rand(12..34), quality: ingredient_quality.sample, category: "canned goods")
+
+
+
+10.times do 
+    Ingredient.create(name: Faker::Food.spice, quantity: rand(12..34), quality: ingredient_quality.sample, category: "spices")
 end
 
-Ingredient.create(name: "Milk" , quantity: rand(1..15), quality: ingredient_quality.sample, category: "dairy")
-Ingredient.create(name: "Eggs" , quantity: rand(1..15), quality: ingredient_quality.sample, category: "dairy")
-Ingredient.create(name: "Challah Bread" , quantity: rand(1..15), quality: ingredient_quality.sample, category: "dairy")
-Ingredient.create(name: "Heavy Cream" , quantity: rand(1..15), quality: ingredient_quality.sample, category: "dairy")
-Ingredient.create(name: "Cheddar Cheese" , quantity: rand(1..15), quality: ingredient_quality.sample, category: "dairy")
-Ingredient.create(name: "Pancake Mix" , quantity: rand(1..15), quality: ingredient_quality.sample, category: "dairy")
-Ingredient.create(name: "Pastry Dough" , quantity: rand(1..15), quality: ingredient_quality.sample, category: "dairy")
-Ingredient.create(name: "Taco Shells" , quantity: rand(1..15), quality: ingredient_quality.sample, category: "dairy")
-
-Ingredient.create(name: "Ground Beef" , quantity: rand(1..15), quality: ingredient_quality.sample, category: "meats")
-Ingredient.create(name: "Halibut" , quantity: rand(1..15), quality: ingredient_quality.sample, category: "meats")
-Ingredient.create(name: "Ground Pork" , quantity: rand(1..15), quality: ingredient_quality.sample, category: "meats")
-Ingredient.create(name: "Tripe" , quantity: rand(1..15), quality: ingredient_quality.sample, category: "meats")
-Ingredient.create(name: "Chicken Cutlets" , quantity: rand(1..15), quality: ingredient_quality.sample, category: "meats")
-Ingredient.create(name: "Pork Chops" , quantity: rand(1..15), quality: ingredient_quality.sample, category: "meats")
-Ingredient.create(name: "Hot Dogs" , quantity: rand(1..15), quality: ingredient_quality.sample, category: "meats")
-Ingredient.create(name: "Salisbury Steak" , quantity: rand(1..15), quality: ingredient_quality.sample, category: "meats")
-
-Ingredient.create(name: "Steamed Vegetables" , quantity: rand(1..15), quality: ingredient_quality.sample, category: "leftovers")
-Ingredient.create(name: "Mashed Potatoes" , quantity: rand(1..15), quality: ingredient_quality.sample, category: "leftovers")
-Ingredient.create(name: "Vegetable Dumplings" , quantity: rand(1..15), quality: ingredient_quality.sample, category: "leftovers")
-
-
-Ingredient.create(name: "Tomato Paste" , quantity: rand(1..15), quality: ingredient_quality.sample, category: "canned goods")
-Ingredient.create(name: "Tuna" , quantity: rand(1..15), quality: ingredient_quality.sample, category: "canned goods")
-Ingredient.create(name: "Kidney Beans" , quantity: rand(1..15), quality: ingredient_quality.sample, category: "canned goods")
-Ingredient.create(name: "Cream of Mushroom" , quantity: rand(1..15), quality: ingredient_quality.sample, category: "canned goods")
-Ingredient.create(name: "Creamed Corn" , quantity: rand(1..15), quality: ingredient_quality.sample, category: "canned goods")
-Ingredient.create(name: "Refried Beans" , quantity: rand(1..15), quality: ingredient_quality.sample, category: "canned goods")
-Ingredient.create(name: "Peaches" , quantity: rand(1..15), quality: ingredient_quality.sample, category: "canned goods")
-Ingredient.create(name: "White Gravy" , quantity: rand(1..15), quality: ingredient_quality.sample, category: "canned goods")
-
-
-
-20.times do 
-    Ingredient.create(name: Faker::Food.spice, quantity: rand(1..15), quality: ingredient_quality.sample, category: "spices")
+10.times do 
+    Ingredient.create(name: Faker::Food.vegetables, quantity: rand(12..34), quality: ingredient_quality.sample, category: "vegetables")
 end
 
-20.times do 
-    Ingredient.create(name: Faker::Food.vegetables, quantity: rand(1..15), quality: ingredient_quality.sample, category: "vegetables")
-end
-
-30.times do
-FamilyMeal.create(recipe_id: Recipe.all.sample.id, employee_id: nil, shift: shifts.sample)
-end
+# 30.times do
+# FamilyMeal.create(recipe_id: Recipe.all.sample.id, employee_id: nil, shift: shifts.sample)
+# end
 
 30.times do
 RecipeIngredient.create(ingredient_id: Ingredient.all.sample.id, recipe_id: Recipe.all.sample.id)
