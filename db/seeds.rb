@@ -25,36 +25,37 @@ Recipe.create(name: "Sourdough Waffles", description: "none")
 Recipe.create(name: "Shakshuka", description: "none")
 Recipe.create(name: "British-Style Beans on Toast", description: "none")
 Recipe.create(name: "Smashed Cheeseburgers", description: "none")
-Recipe.create(name: "Patty Melt", description: "none")
-Recipe.create(name: "Muffaletta Sandwich", description: "none")
-Recipe.create(name: "Falafel", description: "none")
-Recipe.create(name: "Fried Chicken", description: "none")
-Recipe.create(name: "Fried Rice", description: "none")
-Recipe.create(name: "Beef and Barley Soup", description: "none")
-Recipe.create(name: "Falafel", description: "none")
+# Recipe.create(name: "Patty Melt", description: "none")
+# Recipe.create(name: "Muffaletta Sandwich", description: "none")
+# Recipe.create(name: "Falafel", description: "none")
+# Recipe.create(name: "Fried Chicken", description: "none")
+# Recipe.create(name: "Fried Rice", description: "none")
+# Recipe.create(name: "Beef and Barley Soup", description: "none")
+# Recipe.create(name: "Falafel", description: "none")
+
     
 
-10.times do 
+5.times do 
     Ingredient.create(name: Faker::Food.fruits, quantity: rand(12..34), quality: ingredient_quality.sample, category: "fruits")
 end
 
 Ingredient.create(name: "Milk" , quantity: rand(12..34), quality: ingredient_quality.sample, category: "dairy")
 Ingredient.create(name: "Eggs" , quantity: rand(12..34), quality: ingredient_quality.sample, category: "dairy")
 Ingredient.create(name: "Challah Bread" , quantity: rand(12..34), quality: ingredient_quality.sample, category: "dairy")
-Ingredient.create(name: "Heavy Cream" , quantity: rand(12..34), quality: ingredient_quality.sample, category: "dairy")
-Ingredient.create(name: "Cheddar Cheese" , quantity: rand(12..34), quality: ingredient_quality.sample, category: "dairy")
-Ingredient.create(name: "Pancake Mix" , quantity: rand(12..34), quality: ingredient_quality.sample, category: "dairy")
-Ingredient.create(name: "Pastry Dough" , quantity: rand(12..34), quality: ingredient_quality.sample, category: "dairy")
-Ingredient.create(name: "Taco Shells" , quantity: rand(12..34), quality: ingredient_quality.sample, category: "dairy")
+# Ingredient.create(name: "Heavy Cream" , quantity: rand(12..34), quality: ingredient_quality.sample, category: "dairy")
+# Ingredient.create(name: "Cheddar Cheese" , quantity: rand(12..34), quality: ingredient_quality.sample, category: "dairy")
+# Ingredient.create(name: "Pancake Mix" , quantity: rand(12..34), quality: ingredient_quality.sample, category: "dairy")
+# Ingredient.create(name: "Pastry Dough" , quantity: rand(12..34), quality: ingredient_quality.sample, category: "dairy")
+# Ingredient.create(name: "Taco Shells" , quantity: rand(12..34), quality: ingredient_quality.sample, category: "dairy")
 
 Ingredient.create(name: "Ground Beef" , quantity: rand(12..34), quality: ingredient_quality.sample, category: "meats")
 Ingredient.create(name: "Halibut" , quantity: rand(12..34), quality: ingredient_quality.sample, category: "meats")
-Ingredient.create(name: "Ground Pork" , quantity: rand(12..34), quality: ingredient_quality.sample, category: "meats")
-Ingredient.create(name: "Tripe" , quantity: rand(12..34), quality: ingredient_quality.sample, category: "meats")
-Ingredient.create(name: "Chicken Cutlets" , quantity: rand(12..34), quality: ingredient_quality.sample, category: "meats")
-Ingredient.create(name: "Pork Chops" , quantity: rand(12..34), quality: ingredient_quality.sample, category: "meats")
-Ingredient.create(name: "Hot Dogs" , quantity: rand(12..34), quality: ingredient_quality.sample, category: "meats")
-Ingredient.create(name: "Salisbury Steak" , quantity: rand(12..34), quality: ingredient_quality.sample, category: "meats")
+# Ingredient.create(name: "Ground Pork" , quantity: rand(12..34), quality: ingredient_quality.sample, category: "meats")
+# Ingredient.create(name: "Tripe" , quantity: rand(12..34), quality: ingredient_quality.sample, category: "meats")
+# Ingredient.create(name: "Chicken Cutlets" , quantity: rand(12..34), quality: ingredient_quality.sample, category: "meats")
+# Ingredient.create(name: "Pork Chops" , quantity: rand(12..34), quality: ingredient_quality.sample, category: "meats")
+# Ingredient.create(name: "Hot Dogs" , quantity: rand(12..34), quality: ingredient_quality.sample, category: "meats")
+# Ingredient.create(name: "Salisbury Steak" , quantity: rand(12..34), quality: ingredient_quality.sample, category: "meats")
 
 Ingredient.create(name: "Steamed Vegetables" , quantity: rand(12..34), quality: ingredient_quality.sample, category: "leftovers")
 Ingredient.create(name: "Mashed Potatoes" , quantity: rand(12..34), quality: ingredient_quality.sample, category: "leftovers")
@@ -66,9 +67,9 @@ Ingredient.create(name: "Tuna" , quantity: rand(12..34), quality: ingredient_qua
 Ingredient.create(name: "Kidney Beans" , quantity: rand(12..34), quality: ingredient_quality.sample, category: "canned goods")
 Ingredient.create(name: "Cream of Mushroom" , quantity: rand(12..34), quality: ingredient_quality.sample, category: "canned goods")
 Ingredient.create(name: "Creamed Corn" , quantity: rand(12..34), quality: ingredient_quality.sample, category: "canned goods")
-Ingredient.create(name: "Refried Beans" , quantity: rand(12..34), quality: ingredient_quality.sample, category: "canned goods")
-Ingredient.create(name: "Peaches" , quantity: rand(12..34), quality: ingredient_quality.sample, category: "canned goods")
-Ingredient.create(name: "White Gravy" , quantity: rand(12..34), quality: ingredient_quality.sample, category: "canned goods")
+# Ingredient.create(name: "Refried Beans" , quantity: rand(12..34), quality: ingredient_quality.sample, category: "canned goods")
+# Ingredient.create(name: "Peaches" , quantity: rand(12..34), quality: ingredient_quality.sample, category: "canned goods")
+# Ingredient.create(name: "White Gravy" , quantity: rand(12..34), quality: ingredient_quality.sample, category: "canned goods")
 
 Ingredient.create(name: "Flour" , quantity: rand(12..34), quality: ingredient_quality.sample, category: "baking")
 Ingredient.create(name: "Baking Soda" , quantity: rand(12..34), quality: ingredient_quality.sample, category: "baking")
@@ -79,11 +80,11 @@ Ingredient.create(name: "Whole Wheat Flour" , quantity: rand(12..34), quality: i
 
 
 
-10.times do 
+4.times do 
     Ingredient.create(name: Faker::Food.spice, quantity: rand(12..34), quality: ingredient_quality.sample, category: "spices")
 end
 
-10.times do 
+3.times do 
     Ingredient.create(name: Faker::Food.vegetables, quantity: rand(12..34), quality: ingredient_quality.sample, category: "vegetables")
 end
 

@@ -10,13 +10,13 @@
   </head>
   <body>
     <div class="banner">
-      <%= image_tag "/assets/banner.jpg", class: "banner-img" %>
+     FamilyMealEz
     </div>
   <ul class = "nav">
     <li><%= link_to "Create New Recipe", new_recipe_path %></li> •
     <li><%= link_to "See Recipes", recipes_path %></li> •
     <li><%= link_to "See Ingredients", ingredients_path %></li> •
-    <li><%= link_to "Create New Ingredient", new_ingredient_path %></li> •
+    <li><%= link_to "Add New Ingredient", new_ingredient_path %></li> •
     <li><%= link_to "Employee List", employees_path %></li> •
     <li><%= link_to "Assign A Meal", new_family_meal_path %></li> •
     <% if @current_employee %>

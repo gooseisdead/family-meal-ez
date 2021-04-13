@@ -22,10 +22,13 @@
   
   
 .banner {
-    background-color: #3f3c83;
-    border-radius: 15px;
+  background-color: #3f3c83;
+  border-radius: 15px;
+  height: 70px;
   width: 98%;
   margin: 0px auto;
+  font-size: 60px;
+  color: aliceblue;
 }
 
 * {
@@ -163,7 +166,8 @@ body {
 }
 
 #emp_content {
-   display: flex;
+
+   display:inline-flex;
    flex-direction: row;
    flex-wrap: wrap;
    padding: 25px
@@ -192,10 +196,10 @@ transition: 1s;
 }
 
 #emp_staff {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  padding: 85px
+  display:inline-flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   padding: 25px
 }
 
 
@@ -223,26 +227,28 @@ font-weight: 800;
 
 
 #emp_pro {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  padding: 85px
+  display:inline-flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   padding: 25px
 }
 
-
+.ing-type {
+  color: black;
+  font-size: large;
+}
 
 .ings {
-
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  padding: 55px;
-  
+  margin-left: 120px;;
+  display:inline-flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   padding: 25px
 }
 
-.ings p {
+/* .ings p {
 text-decoration: underline;
-}
+} */
 
 .ings ul {
 list-style-type: none;
@@ -267,15 +273,17 @@ transition: 1s;
 }
 
 .rec_deets {
-  display: center;
-  padding: 25px
+  display:inline-table;
+   /* flex-direction:inherit; */
+   flex-wrap: wrap;
+   padding: 25px
 }
 
 .rec_deets p{
 list-style-type: none;
 background-color: rgb(236, 233, 233);
 border-radius: 25px;
-display: center;
+/* display:center; */
 line-height: 20px;
 padding: 10px;
 }
@@ -294,10 +302,37 @@ font-weight: 800;
 }
 
 .all_rec {
-  display: center;
-  padding: 25px;
+  display:inline-table;
+   flex-direction: row;
+   flex-wrap: wrap;
+   padding: 25px
   
 }
+
+.all-ings {
+  margin-left: 120px;
+  display:inline-flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 25px
+}
+
+.rec-ings {
+  margin-left: 120px;
+  display:inline-flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 25px
+}
+
+.use-today {
+  /* display:inline-flex; */
+  /* align-items: center; */
+   flex-direction: row;
+   flex-wrap: wrap;
+   padding: 25px
+  
+} 
 
 .all_rec p{
 list-style-type: none;
@@ -322,8 +357,10 @@ font-weight: 800;
 }
 
 .menu {
-  display: center;
-  padding: 25px
+  display:inline-flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   padding: 25px
 }
 
 .menu p {
@@ -347,6 +384,12 @@ text-decoration: none;
 color: #43609e;
 font-weight: 800;
 }
+
+.recipe_ingredient_ids {
+  width: auto;
+}
+
+
 
 
 

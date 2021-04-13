@@ -84,70 +84,91 @@
 <p><%= @recipe.description %></p> 
 <h2>Ingredients</h2>
 <div class = "rec_deets">
-<div>
+<%# <div> %>
 <% @recipe.recipe_ingredients.each do |recipe_ingredient| %>
 
 <% if recipe_ingredient.ingredient.category == "fruits" %>
+<div class = "rec-ings">
 <%= image_tag ("/assets/fruits.png"), class: "img-responsive", size: "90x90" %>
 <p><%= link_to recipe_ingredient.ingredient.name, ingredient_path(recipe_ingredient.ingredient.id) %></p>
 <p>Amount Available: <%= recipe_ingredient.ingredient.quantity %></p>
+</div>
   
 <% elsif recipe_ingredient.ingredient.category == "vegetables" %>
+<div class = "rec-ings">
 <%= image_tag ("/assets/vegetables.png"), class: "img-responsive", size: "90x90" %>
 <p><%= link_to recipe_ingredient.ingredient.name, ingredient_path(recipe_ingredient.ingredient.id) %></p>
 <p>Amount Available: <%= recipe_ingredient.ingredient.quantity %></p>
+</div>
    
 <% elsif recipe_ingredient.ingredient.quality == "use today" %>
+<div class = "rec-ings">
 <%= image_tag ("/assets/urgent.png"), class: "img-responsive", size: "90x90" %>
 <p><%= link_to recipe_ingredient.ingredient.name, ingredient_path(recipe_ingredient.ingredient.id) %></p>
 <p>Amount Available: <%= recipe_ingredient.ingredient.quantity %></p>
+</div>
    
 <% elsif recipe_ingredient.ingredient.quality == "expiring" %>
+<div class = "rec-ings">
 <%= image_tag ("/assets/expiring.png"), class: "img-responsive", size: "90x90" %>
 <p><%= link_to recipe_ingredient.ingredient.name, ingredient_path(recipe_ingredient.ingredient.id) %></p>
 <p>Amount Available: <%= recipe_ingredient.ingredient.quantity %></p>
+</div>
 
 <% elsif recipe_ingredient.ingredient.quality == "day_old" %>
+<div class = "rec-ings">
 <%= image_tag ("/assets/day_old.png"), class: "img-responsive", size: "90x90" %>
 <p><%= link_to recipe_ingredient.ingredient.name, ingredient_path(recipe_ingredient.ingredient.id) %></p>
 <p>Amount Available: <%= recipe_ingredient.ingredient.quantity %></p>
->
+</div>
 
 <% elsif recipe_ingredient.ingredient.category == "spices" %>
+<div class = "rec-ings">
 <%= image_tag ("/assets/spices.png"), class: "img-responsive", size: "90x90" %>
 <p><%= link_to recipe_ingredient.ingredient.name, ingredient_path(recipe_ingredient.ingredient.id) %></p>
 <p>Amount Available: <%= recipe_ingredient.ingredient.quantity %></p>
+</div>
 
  
 <% elsif recipe_ingredient.ingredient.category == "meats" %>
+<div class = "rec-ings">
 <%= image_tag ("/assets/meats.png"), class: "img-responsive", size: "90x90" %>
 <p><%= link_to recipe_ingredient.ingredient.name, ingredient_path(recipe_ingredient.ingredient.id) %></p>
 <p>Amount Available: <%= recipe_ingredient.ingredient.quantity %></p>
+</div>
 
 <% elsif recipe_ingredient.ingredient.category == "dairy" %>
+<div class = "rec-ings">
 <%= image_tag ("/assets/meats.png"), class: "img-responsive", size: "90x90" %>
 <p><%= link_to recipe_ingredient.ingredient.name, ingredient_path(recipe_ingredient.ingredient.id) %></p>
 <p>Amount Available: <%= recipe_ingredient.ingredient.quantity %></p>
+</div>
 
  
 <% elsif recipe_ingredient.ingredient.category == "leftovers" %>
+<div class = "rec-ings">
 <%= image_tag ("/assets/leftovers.png"), class: "img-responsive", size: "90x90" %>
 <p><%= link_to recipe_ingredient.ingredient.name, ingredient_path(recipe_ingredient.ingredient.id) %></p>
 <p>Amount Available: <%= recipe_ingredient.ingredient.quantity %></p>
+</div>
 
 <% elsif recipe_ingredient.ingredient.category == "canned goods" %>
+<div class = "rec-ings">
 <%= image_tag ("/assets/expiring.png"), class: "img-responsive", size: "90x90" %>
 <p><%= link_to recipe_ingredient.ingredient.name, ingredient_path(recipe_ingredient.ingredient.id) %></p>
 <p>Amount Available: <%= recipe_ingredient.ingredient.quantity %></p>
+</div>
 
 <% else recipe_ingredient.ingredient.category == nil %>
+<div class = "rec-ings">
 <%= image_tag ("/assets/qmark.png"), class: "img-responsive", size: "90x90" %>
 <p><%= link_to recipe_ingredient.ingredient.name, ingredient_path(recipe_ingredient.ingredient.id) %></p>
 <p>Amount Available: <%= recipe_ingredient.ingredient.quantity %></p>
+</div>
     <% end %>
 <% end %>
 </div>
-</div>
+<%# </div> %>
 <br>
 
     
